@@ -4,23 +4,29 @@ import Paragraph from "components/content/paragraph/paragraph";
 import Button from "components//content/button/button";
 import Picture from "components//content/picture/picture";
 import InputText from "components//inputs/input-text/input-text";
-import InputCheckboxGroup from "components//inputs/input-checkbox-group/input-checkbox-group";
+import InputSelection from "components//inputs/input-selection/input-selection";
+import InputFile from "components//inputs/input-file/input-file";
 
 const Start = ( ) => {
 
   return (
     <Section className="start">
-      {/* <InputText /> */}
-      <InputCheckboxGroup 
+      <InputSelection 
+				type="radio"
         label="An diesen Tagen geht es mir am besteen:"
         header="Wochentage"
         name="weekdays"
         options={[
-          { id: "1", value: "Montag", label: "Montag", info: "some infos" },
+          { id: "1", value: "Montag", label: "Montag" },
           { id: "2", value: "Dienstag", label: "Dienstag" },
           { id: "3", value: "Mittwoch", label: "Mittwoch" },
         ]}
       />
+			<InputFile 
+				className="input-file"
+				header="Foto hochladen"
+				label="Bitte laden Sie ein Foto von sich hoch damit wir uns ein Bild von Ihnen machen können:"
+			/>
     </Section>
   );
 

@@ -1,0 +1,51 @@
+.input-file {
+	margin-top: 4px;
+
+	&__label {
+		color: $white-100;
+	}
+
+	&__input-container, .input-container {
+			display: flex;
+			flex-direction: row;
+			
+			&__header, .header {
+				background-color: $grey-60;
+				width: 100%;
+				border-radius: 4px;
+
+				&__text {
+					padding: 4px 8px;
+					color: $blue-100;
+				}
+
+			}
+
+			&__action, .action {
+					background-color: $grey-60;
+					color: $white-100;
+					background-image: url('/icons/input-fields/resume.svg');
+					background-repeat: no-repeat;
+					background-size: 12px;
+					background-position: center;
+					width: 36px;
+					height: 36px;
+					display: grid;
+					place-items: center;
+					margin-left: 4px;
+					border-radius: 4px;
+
+					&__icon {
+						color: $blue-100;
+						font-size: 16px;
+					}
+
+			}
+
+	}
+
+	&__fake-input {
+			display: none;
+	}
+
+}
