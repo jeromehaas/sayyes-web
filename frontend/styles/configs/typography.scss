@@ -99,3 +99,17 @@
 	}
 
 }
+
+.mobile-navigation {
+
+	&__menu, .menu {
+
+		&__item {
+    	font-family: "Beausite-Slick", Arial, sans-serif;
+			font-size: 24px;
+			line-height: 1.5;
+		}
+
+	}
+
+}

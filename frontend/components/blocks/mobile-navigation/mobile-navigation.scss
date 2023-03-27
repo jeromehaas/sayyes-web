@@ -1,0 +1,56 @@
+.mobile-navigation {
+	display: none;
+
+	&__bar, .bar {
+		padding: 16px 24px;
+		height: 72px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;;
+
+		&__logo {
+			height: 24px;
+		}
+
+		&__hamburger {
+			height: 100%;
+		}
+
+	}
+
+	&__menu, .menu {
+		background-color: $blue-100;
+		position: fixed;
+		top: 72px;
+		left: 100%;
+		bottom: 0;
+		width: 320px;
+		height: 100%;
+		transition: all 0.3s ease;
+		padding: 32px;
+		display: flex;
+		flex-direction: column;
+
+
+		&__item {
+			color: $white-100;
+			text-align: right;
+			width: 100%;
+		}
+
+	}
+
+	&--active {
+
+		& .menu {
+			left: calc(100% - 320px);
+		}
+
+	}
+
+	@media (max-width: 800px) {
+		display: block;
+	}
+
+}
