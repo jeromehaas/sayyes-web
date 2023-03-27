@@ -6,6 +6,7 @@ import Picture from "components//content/picture/picture";
 import InputText from "components//inputs/input-text/input-text";
 import InputSelection from "components//inputs/input-selection/input-selection";
 import InputFile from "components//inputs/input-file/input-file";
+import InputSubmit from "components//inputs/input-submit/input-submit";
 
 const Start = ( ) => {
 
@@ -27,6 +28,7 @@ const Start = ( ) => {
 				header="Foto hochladen"
 				label="Bitte laden Sie ein Foto von sich hoch damit wir uns ein Bild von Ihnen machen können:"
 			/>
+			<InputSubmit label="Senden" />
     </Section>
   );
 
