@@ -1,9 +1,11 @@
+import Section from "components//layouts/section/section";
+
 const Start = ( ) => {
 
   return (
-    <div>
+    <Section className="start">
       Hello World!
-    </div>
+    </Section>
   );
 
 };
