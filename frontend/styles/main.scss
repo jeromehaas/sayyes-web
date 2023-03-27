@@ -12,8 +12,12 @@
 @import 'components/content/button/button.scss';
 @import 'components/content/picture/picture.scss';
 
+/* BLOCKS */
+@import 'components/blocks/desktop-navigation/desktop-navigation.scss';
+
 /* LAYOUTS */
 @import 'components/layouts/section/section.scss';
+@import 'components/layouts/page/page.scss';
 
 /* INPUTS */
 @import 'components/inputs/input-text/input-text.scss';

@@ -13,6 +13,7 @@
         padding: 4px 8px;
         background-color: $grey-60;
         border-radius: 4px;        
+				cursor: pointer;
 
         &__text {
             color: $blue-100;
@@ -55,6 +56,7 @@
                 border: 2px solid $blue-100;
                 background-color: $grey-60;
                 -webkit-appearance: none;
+								cursor: pointer;
 
                 &:checked {
                     background-color: $blue-100;
@@ -63,6 +65,7 @@
 
             &__label {
                 grid-area: label;
+								cursor: pointer;
             }
 
             &__info {
@@ -70,6 +73,7 @@
             }
 
         }
+
     }
 
 }
