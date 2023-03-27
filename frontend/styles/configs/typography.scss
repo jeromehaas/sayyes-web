@@ -48,5 +48,45 @@
 
 .button {
     font-size: 18px;
-    color: $grey-60;
+}
+
+.input-field {
+
+    &__label, 
+    &__input {
+        font-family: "Beausite-Classic", Arial, sans-serif;
+    }
+
+    &__label {
+        margin-bottom: px;
+        display: block;
+    }
+
+    &__error {
+        font-size: 12px;
+    }
+
+    &__header, .header {
+
+        &__text {
+            font-size: 18px;
+        }
+    }
+
+    &__menu, .menu {
+
+        &__item, .item {
+
+            &__label {
+                font-family: "Beausite-Classic", Arial, sans-serif;
+                font-size: 18px;
+            }
+
+            &__info {
+                font-family: "Beausite-Classic", Arial, sans-serif;
+                font-size: 12px;
+            }
+        }
+    }
+
 }
