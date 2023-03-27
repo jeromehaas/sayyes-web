@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "Beausite-Classic";
+    src:
+      local('fonts/beausite-classic'), url("/fonts/beausite-classic/beausite-classic-light.ttf") format("ttf"),
+      local('fonts/beausite-classic'), url("/fonts/beausite-classic/beausite-classic-light.woff") format("woff"),
+      local('fonts/beausite-classic'), url("/fonts/beausite-classic/beausite-classic-light.woff2") format("woff2");
+    font-display: block;
+    font-weight: 300;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: "Beausite-Slick";
+    src:
+      local('fonts/beausite-slick'), url("/fonts/beausite-slick/beausite-slick-light.ttf") format("ttf"),
+      local('fonts/beausite-slick'), url("/fonts/beausite-slick/beausite-slick-light.woff") format("woff"),
+      local('fonts/beausite-slick'), url("/fonts/beausite-slick/beausite-slick-light.woff2") format("woff2");
+    font-display: block;
+    font-weight: 300;
+    font-style: normal;
+  }
