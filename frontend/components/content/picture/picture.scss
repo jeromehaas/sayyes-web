@@ -1,0 +1,198 @@
+.picture {
+    position: relative;
+    width: 400px;
+    height: 560px;
+
+    &__source {
+        position: absolute;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+    }
+        
+    &__figure {
+        content: "";
+        display: none;
+        position: absolute;
+        display: block;
+        border-width: 3px;
+        border-style: solid;
+        border-color: transparent;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+
+    }
+
+        &[data-figure-form="up"] {
+
+            & .figure {
+                border-radius: 200px 200px 0 0;
+            }
+
+            & .source {
+                border-radius: 200px 200px 0 0;
+            }
+
+        }
+        
+        &[data-figure-form="down"] {
+
+            & .figure {
+                border-radius: 0 0 200px 200px;
+            }
+
+            & .source {
+                border-radius: 0 0 200px 200px;
+            }
+
+        }
+
+        &[data-figure-form="sym"] {
+
+            & .figure {
+                border-radius: 40px 40px 40px 40px;
+            }
+
+            & .source {
+                border-radius: 40px 40px 40px 40px;
+            }
+
+        }
+
+
+        &[data-figure-position="top-left"] {
+
+            .figure {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+            }
+
+            .source {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                top: 40px;
+                left: 40px
+            }
+
+        }
+
+        &[data-figure-position="bottom-right"] {
+
+            .figure {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                top: 40px;
+                left: 40px
+            }
+
+            .source {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+            }
+
+        }
+
+        &[data-figure-position="bottom-left"] {
+
+            .figure {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                top: 40px;
+            }
+
+            .source {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                left: 40px
+            }
+
+        }
+
+       &[data-figure-position="top-right"] {
+
+            .figure {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                left: 40px;
+            }
+
+            .source {
+                width: calc(100% - 40px);
+                height: calc(100% - 40px);
+                top: 40px;
+                left: 0px
+            }
+
+        }
+
+
+        &[data-figure-positoin="center"] {
+
+            .figure {
+                width: 100%;
+                height: 100%;
+            }
+
+            .source {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+    &[data-figure-background-color="blue"] {
+
+        .figure {
+            background-color: $blue-100;
+        }
+
+    }
+
+    &[data-figure-background-color="grey"] {
+
+        .figure {
+            background-color: $grey-60;
+        }
+
+    }   
+
+
+    &[data-figure-border-color="grey"] {
+
+        .figure {
+            border-color: $grey-60;
+        }
+
+    }
+
+    &[data-figure-border-color="blue"] {
+
+        .figure {
+            border-color: $blue-100;
+        }
+
+    }
+
+    &[data-figure-ordinate="back"] {
+
+        .figure {
+            z-index: 0;
+        }
+
+    }
+
+    &[data-figure-ordinate="front"] {
+
+        .figure {
+            z-index: 10;
+        }
+
+    }
+
+}
+
