@@ -5,29 +5,48 @@
 }
 
 .heading {
+    font-size: 45px;
+    letter-spacing: 7%;
+    font-family: "Beausite-Slick", Arial, sans-serif;
+    line-height: 1.5;
 
     &--h1 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 45px;
         letter-spacing: 7%;
+        line-height: 1.5;
     }
 
     &--h2 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 35px;
         letter-spacing: 7%;
+        line-height: 1.5;
     }
 
     &--h3 {
         font-family: "Beausite-Classic", Arial, sans-serif;
         font-size: 35px;
         letter-spacing: 7%;
+        line-height: 1.5;
     }
 
     &--h4 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 25px;
         letter-spacing: 7%;
+        line-height: 1.5;
     }
 
+}
+
+.paragraph {
+    font-size: 25px;
+    font-family: "Beausite-Classic", Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.button {
+    font-size: 18px;
+    color: $grey-60;
 }
