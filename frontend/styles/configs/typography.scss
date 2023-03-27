@@ -4,3 +4,30 @@
     font-weight: 300;
 }
 
+.heading {
+
+    &--h1 {
+        font-family: "Beausite-Slick", Arial, sans-serif;
+        font-size: 45px;
+        letter-spacing: 7%;
+    }
+
+    &--h2 {
+        font-family: "Beausite-Slick", Arial, sans-serif;
+        font-size: 35px;
+        letter-spacing: 7%;
+    }
+
+    &--h3 {
+        font-family: "Beausite-Classic", Arial, sans-serif;
+        font-size: 35px;
+        letter-spacing: 7%;
+    }
+
+    &--h4 {
+        font-family: "Beausite-Slick", Arial, sans-serif;
+        font-size: 25px;
+        letter-spacing: 7%;
+    }
+
+}
