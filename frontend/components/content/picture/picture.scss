@@ -1,7 +1,7 @@
 .picture {
     position: relative;
-    width: 400px;
-    height: 560px;
+    width: 320px;
+    height: 400px;
 
     &__source {
         position: absolute;
@@ -193,6 +193,11 @@
         }
 
     }
+
+		@media (max-width: 1050px) {
+			width: 240px;
+			height: 320px;
+		}
 
 }
 

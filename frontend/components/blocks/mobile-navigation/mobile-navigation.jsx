@@ -55,6 +55,7 @@ const MobileNavigation = () => {
 				<Link className="menu__item" href="/">Verkaufen</Link>
 				<Link className="menu__item" href="/">Über Uns</Link>
 			</div>
+			<div className="mobile-navigation__placeholder"></div>
 		</nav>
 	);
 

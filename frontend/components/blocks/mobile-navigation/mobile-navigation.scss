@@ -2,12 +2,18 @@
 	display: none;
 
 	&__bar, .bar {
+		z-index: 50;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
 		padding: 16px 24px;
 		height: 72px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;;
+		background-color: $white-100;
 
 		&__logo {
 			height: 24px;
@@ -31,7 +37,7 @@
 		padding: 32px;
 		display: flex;
 		flex-direction: column;
-
+		z-index: 50;
 
 		&__item {
 			color: $white-100;
@@ -47,6 +53,10 @@
 			left: calc(100% - 320px);
 		}
 
+	}
+
+	&__placeholder {
+		height: 72px;
 	}
 
 	@media (max-width: 800px) {
