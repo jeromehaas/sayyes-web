@@ -1,0 +1,24 @@
+.buy-intro {
+	margin-top: 40px;
+
+	&__heading {
+		text-align: right;
+		margin-bottom: 32px;
+	}
+
+	&__text, .text {
+		max-width: 800px;
+		margin-left: auto;
+
+		&__item, .item {
+			margin-bottom: 32px;
+		}
+
+	}
+
+}
+
+
+
+
+

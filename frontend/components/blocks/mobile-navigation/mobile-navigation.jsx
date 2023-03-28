@@ -50,10 +50,10 @@ const MobileNavigation = () => {
 				<div className="bar__hamburger" ref={ hamburgerContainerRef } onClick={ handleClick }></div>
 			</div>
 			<div className="mobile-navigation__menu menu">
-				<Link className="menu__item" href="/">Home</Link>
-				<Link className="menu__item" href="/">Kaufen</Link>
-				<Link className="menu__item" href="/">Verkaufen</Link>
-				<Link className="menu__item" href="/">Über Uns</Link>
+				<Link className="menu__item" href="/" onClick={ handleClick }>Home</Link>
+				<Link className="menu__item" href="/buy" onClick={ handleClick }>Kaufen</Link>
+				<Link className="menu__item" href="/" onClick={ handleClick }>Verkaufen</Link>
+				<Link className="menu__item" href="/" onClick={ handleClick }>Über Uns</Link>
 			</div>
 			<div className="mobile-navigation__placeholder"></div>
 		</nav>

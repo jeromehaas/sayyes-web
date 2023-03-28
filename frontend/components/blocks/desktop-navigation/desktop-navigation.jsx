@@ -22,7 +22,7 @@ const DesktopNavigation = () => {
 				<img className="bar__logo" src="/logos/logo-sayyes.svg" />
 				<div className="bar__links">
 					<Link className="links__item" href="/">Home</Link>
-					<Link className="links__item" href="/">Kaufen</Link>
+					<Link className="links__item" href="/buy">Kaufen</Link>
 					<Link className="links__item" href="/">Verkaufen</Link>
 					<Link className="links__item" href="/">About</Link>
 					<Link className="links__item" href="/">Kollektion</Link>

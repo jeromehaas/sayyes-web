@@ -1,12 +1,13 @@
 import Page from "components/layouts/page/page";
 import Hero from "components/sections/hero/hero";
+import { Fragment } from "react";
 
 const Start = ( ) => {
 
   return (
-		<div>
+		<Fragment>
 			<Hero />
-		</div>
+		</Fragment>
   );
 
 };
