@@ -9,7 +9,8 @@
         "field__error";
 
     &__label { 
-        grid-area: field__label
+        grid-area: field__label;
+				color: $white-100;
     }
 
     &__input {
