@@ -1,4 +1,4 @@
-.buy-form {
+.sell-form {
 	background-color: $blue-100;
 	position: relative;
 	margin-top: 120px;
@@ -6,12 +6,11 @@
 	&__container, .container {
 		display: grid;
 		grid-template-areas: 
-			"picture heading"
-			"picture personal-data"
-			"dress try-on"
-			"dress upload"
-			"dress action";
-		grid-template-columns: 320px auto;
+			"heading picture"
+			"personal-data picture"
+			"dress picture"
+			"action picture";
+		grid-template-columns: auto 320px;
 		grid-template-rows: auto auto auto auto ;
 		grid-row-gap: 32px;
 		grid-column-gap: 64px;
@@ -58,7 +57,7 @@
 		&__dress, .dress {
 			grid-area: dress;
 			display: grid;
-			grid-template-columns: 1fr;
+			grid-template-columns: 1fr 1fr;
 			grid-gap: 24px;
 
 
@@ -67,34 +66,13 @@
 				margin-bottom: 24px;
 			}
 
-		}
-
-		&__try-on, .try-on {
-			grid-area: try-on;
-			display: grid;
-			grid-gap: 32px;
-			grid-template-columns: 1fr 1fr;
-			
-			&__heading  {
-				color: $white-100;
-				margin-bottom: 24px;
-			}
-
-			&__heading  {
-				grid-column: span 2;
-			}
+			&__heading,
+            &__input--brand {
+                grid-column: span 2;
+            }
 
 		}
 
-		&__upload, .upload {
-			grid-area: upload;
-
-			&__heading {
-				color: $white-100;
-				margin-bottom: 24px;
-			}
-
-		}
 
 		&__action, .action {
 			grid-area: action;
@@ -113,7 +91,7 @@
 	@media (max-width: 950px) {
 
 		&__container, .container {
-			grid-template-columns: 240px auto;
+			grid-template-columns: auto 240px;
 
 			&__try-on, .try-on {
 				grid-template-columns: 1fr;
@@ -144,17 +122,13 @@
 			grid-template-areas: 
 				"heading"
 				"personal-data"
-				"try-on"
 				"dress"
-				"upload"
-				"submit";
+				"action";
 			grid-template-columns: 100%;
-			grid-template-rows: auto auto auto auto ;
 			grid-row-gap: 32px;
 			grid-column-gap: 64px;
 			
 			&__picture {
-				border: 10px solid red !important;
 				display: none;
 			}
 			
@@ -167,6 +141,16 @@
 				}
 
 			}
+
+            &__dress, .dress {
+                grid-template-columns: 1fr;
+
+                &__heading,
+                &__input--brand {
+                    grid-column: span 1;
+                }
+
+            }
 
 		}	
 

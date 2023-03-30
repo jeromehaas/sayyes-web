@@ -10,10 +10,7 @@ import { useForm } from "react-hook-form";
 const BuyForm = () => {
 
 	// BRING IN REACT-HOOK-FORM
-	const { register, handleSubmit, getValues, formState, watch, errors } = useForm();
-
-	// GET FORM VALUES
-	const values = getValues();
+	const { register, handleSubmit, getValues, formState } = useForm();
 
 	// HANDLE DISPATCH
 	const handleDispatch = (data, event) => {
