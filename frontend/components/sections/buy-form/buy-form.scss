@@ -1,25 +1,32 @@
 .buy-form {
 	background-color: $blue-100;
 	position: relative;
-	margin-top: 64px;
+	margin-top: 120px;
 
 	&__container, .container {
 		display: grid;
 		grid-template-areas: 
-			"empty heading"
+			"picture heading"
 			"picture personal-data"
-			"dress appointment"
+			"dress try-on"
 			"dress upload"
 			"dress submit";
 		grid-template-columns: 320px auto;
 		grid-template-rows: auto auto auto auto ;
-		grid-column-gap: 32px;
+		grid-row-gap: 32px;
+		grid-column-gap: 64px;
+
+		& > * {
+			position: relative;
+			bottom: 120px;
+		}
+
+
 
 		&__heading {
 			grid-area: heading;
 			color: $blue-100;
-			position: relative; 
-			bottom: 80px;
+			margin-bottom: 40px;
 		}
 
 		&__picture {
@@ -27,55 +34,141 @@
 			height: 400px;
 			align-self: start;
 			justify-self: start;
-			position: relative;
-			bottom: 120px;
 		}
 
 		&__personal-data, .personal-data {
 			grid-area: personal-data;
-			border: 1px solid red;
-			position: relative;
-			bottom: 48px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-template-areas: 
-				"heading heading"
-				"firstname lastname"
-				"street street"
-				"town town";
-			grid-gap: 32px;
-
+			grid-gap: 24px;
+			
 			&__heading {
 				color: $white-100;
-				margin-bottom: 32px;
-				grid-area: heading;
+				margin-bottom: 24px;
 			}
-
-			&__input--firstname {
-				grid-area: firstname;
-			}
-
-			&__input--lastname {
-				grid-area: lastname;
-			}
-
-			&__input--street {
-				grid-area: street;
-			}
-
+		
+			&__heading,
+			&__input--street,
 			&__input--town {
-				grid-area: town;
+				grid-column: span 2;
 			}
 
 		}
 
 		&__dress, .dress {
 			grid-area: dress;
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-gap: 24px;
+
 
 			&__heading {
 				color: $white-100;
+				margin-bottom: 24px;
 			}
+
 		}
+
+		&__try-on, .try-on {
+			grid-area: try-on;
+			display: grid;
+			grid-gap: 32px;
+			grid-template-columns: 1fr 1fr;
+			
+			&__heading  {
+				color: $white-100;
+				margin-bottom: 24px;
+			}
+
+			&__heading  {
+				grid-column: span 2;
+			}
+
+		}
+
+		&__upload, .upload {
+			grid-area: upload;
+
+			&__heading {
+				color: $white-100;
+				margin-bottom: 24px;
+			}
+
+		}
+
+		&__action, .action {
+			grid-area: submit;
+			display: grid;
+
+			&__submit {
+				margin-top: auto;
+				justify-self: end;
+				margin-bottom: 0;
+			}
+
+		}
+
+	}
+
+	@media (max-width: 950px) {
+
+		&__container, .container {
+			grid-template-columns: 240px auto;
+
+			&__try-on, .try-on {
+				grid-template-columns: 1fr;
+				
+				&__heading  {
+					color: $white-100;
+					margin-bottom: 24px;
+				}
+
+				&__heading,
+				&__input  {
+					grid-column: span 1;
+				}
+
+			}
+
+		}
+
+
+
+
+
+	}
+
+	@media (max-width: 850px) {
+
+		&__container, .container {
+			grid-template-areas: 
+				"heading"
+				"personal-data"
+				"try-on"
+				"dress"
+				"upload"
+				"submit";
+			grid-template-columns: auto;
+			grid-template-rows: auto auto auto auto ;
+			grid-row-gap: 32px;
+			grid-column-gap: 64px;
+			
+			&__picture {
+				border: 10px solid red !important;
+				display: none;
+			}
+			
+			&__personal-data, .personal-data {
+				grid-template-columns: 1fr;
+
+				&__heading,
+				&__input {
+					grid-column: span 1;
+				}
+
+			}
+
+		}	
 
 	}
 
