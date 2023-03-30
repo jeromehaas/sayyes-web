@@ -1,0 +1,44 @@
+.about-intro {
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    &__pictures {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 80px;
+        margin-bottom: 80px;
+    }
+
+
+	&__text, .text {
+
+		&__item, .item {
+			margin-bottom: 32px;
+		}
+
+	}
+
+
+    @media (max-width: 700px) {
+
+        &__pictures, .pictures {
+            grid-template-columns: auto;
+
+            &__item {
+                
+                &:nth-child(2) {
+                    border: 2px solid green;
+                    display: none;
+                }
+            }
+
+        }
+
+    }
+
+}
