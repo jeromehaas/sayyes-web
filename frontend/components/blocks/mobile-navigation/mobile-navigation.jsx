@@ -52,7 +52,7 @@ const MobileNavigation = () => {
 			<div className="mobile-navigation__menu menu">
 				<Link className="menu__item" href="/" onClick={ handleClick }>Home</Link>
 				<Link className="menu__item" href="/buy" onClick={ handleClick }>Kaufen</Link>
-				<Link className="menu__item" href="/" onClick={ handleClick }>Verkaufen</Link>
+				<Link className="menu__item" href="/sell" onClick={ handleClick }>Verkaufen</Link>
 				<Link className="menu__item" href="/" onClick={ handleClick }>Über Uns</Link>
 			</div>
 			<div className="mobile-navigation__placeholder"></div>

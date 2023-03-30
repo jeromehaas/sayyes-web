@@ -1,17 +1,67 @@
 .buy-intro {
 	margin-top: 40px;
 
+	&__inner {
+		display: grid;
+		grid-template-areas: 
+		"heading picture"
+		"text text";
+		align-items: end;
+		grid-template-columns: auto 320px;
+		grid-gap: 32px;
+	}
+
 	&__heading {
-		text-align: right;
+		margin-bottom: 32px;
+		grid-area: heading;
+	}
+
+	&__picture {
+		grid-area: picture;
 		margin-bottom: 32px;
 	}
 
 	&__text, .text {
-		max-width: 800px;
-		margin-left: auto;
+		grid-area: text;
 
 		&__item, .item {
 			margin-bottom: 32px;
+		}
+
+	}
+
+	@media (max-width: 950px) {
+
+		&__inner {
+			grid-template-columns: auto 240px;;
+		}
+
+	}
+
+	@media (max-width: 750px) {
+
+		&__heading {
+			text-align: right;
+		}
+
+	}
+
+	@media (max-width: 500px) {
+
+		&__inner {
+			grid-template-areas: 
+				"picture"
+				"heading"
+				"text";	
+			grid-template-columns: auto;
+		}
+
+		&__picture {
+			justify-self: center;
+		}
+
+		&__heading {
+			text-align: left;;
 		}
 
 	}

@@ -51,7 +51,7 @@ const BuyForm = () => {
 				</fieldset>
 
 				<fieldset className="container__upload upload">
-					<Heading className="upload__heading">Upload</Heading>
+					<Heading className="upload__heading">Dein Foto</Heading>
 					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } readOnly />
 				</fieldset> 
 
