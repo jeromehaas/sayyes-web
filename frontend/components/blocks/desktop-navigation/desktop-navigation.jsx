@@ -19,7 +19,7 @@ const DesktopNavigation = () => {
 	return (
 		<nav className={`desktop-navigation ${ scrollPosition > 10 ? 'desktop-navigation--small' : ''}`}>
 			<div className="desktop-navigation__bar bar">
-				<img className="bar__logo" src="/logos/logo-sayyes.svg" />
+				<Link className="bar__logo-link" href="/"><img className="bar__logo" src="/logos/logo-sayyes.svg" /></Link>
 				<div className="bar__links">
 					<Link className="links__item" href="/">Home</Link>
 					<Link className="links__item" href="/buy">Kaufen</Link>

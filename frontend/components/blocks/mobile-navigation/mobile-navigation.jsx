@@ -1,5 +1,6 @@
 import Lottie from "lottie-web";
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from "next/router";
 import Link from "next/link";
 
 const MobileNavigation = () => {
@@ -7,8 +8,19 @@ const MobileNavigation = () => {
 	const [ menuVisibility, setMenuVisibility ] = useState(false);
 	const hamburgerRef = useRef();
 	const hamburgerContainerRef = useRef();
+	const router = useRouter();
 
-	const handleClick = () => {
+
+	const handleClick = (event, link) => {
+		event.preventDefault();
+		router.push(link);
+		setTimeout(() => {
+			toggleHamburger();
+			toggleMenu();
+		}, 300);
+	};
+
+	const handleClose = () => {
 		toggleHamburger();
 		toggleMenu();
 	};
@@ -46,15 +58,15 @@ const MobileNavigation = () => {
 	return (
 		<nav className={`mobile-navigation ${ menuVisibility ? 'mobile-navigation--active' : '' }`}>
 			<div className="mobile-navigation__bar bar">
-				<img className="bar__logo" src="/logos/logo-sayyes.svg" alt="Sayyes" />
-				<div className="bar__hamburger" ref={ hamburgerContainerRef } onClick={ handleClick }></div>
+				<Link className="bar__logo-link" href="/"><img className="bar__logo" src="/logos/logo-sayyes.svg" alt="Sayyes" /></Link>
+				<div className="bar__hamburger" ref={ hamburgerContainerRef } onClick={ handleClose }></div>
 			</div>
 			<div className="mobile-navigation__menu menu">
-				<Link className="menu__item" href="/" onClick={ handleClick }>Home</Link>
-				<Link className="menu__item" href="/buy" onClick={ handleClick }>Kaufen</Link>
-				<Link className="menu__item" href="/sell" onClick={ handleClick }>Verkaufen</Link>
-				<Link className="menu__item" href="/about" onClick={ handleClick }>Über Uns</Link>
-				<Link className="menu__item" href="/collection" onClick={ handleClick }>Kollektion</Link>
+				<Link className="menu__item" href="/" onClick={ (event) => handleClick(event, '/') }>Home</Link>
+				<Link className="menu__item" href="/buy" onClick={ (event) => handleClick(event, '/buy') }>Kaufen</Link>
+				<Link className="menu__item" href="/sell" onClick={ (event) => handleClick(event, '/sell') }>Verkaufen</Link>
+				<Link className="menu__item" href="/about" onClick={ (event) => handleClick(event, '/about') }>Über Uns</Link>
+				<Link className="menu__item" href="/collection" onClick={ (event) => handleClick(event, '/collection') }>Kollektion</Link>
 			</div>
 			<div className="mobile-navigation__placeholder"></div>
 		</nav>
