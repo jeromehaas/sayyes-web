@@ -6,7 +6,7 @@ const DataPrivacyContent = () => {
 
     return (
         <Section className="data-privacy-content">
-            <Heading className="data-privacy-content__heading">ABG</Heading>
+            <Heading className="data-privacy-content__heading">Datenschutz</Heading>
             <div className="data-privacy-content__content content">
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4">1. Erhebung, Verarbeitung und Nutzung personenbezogener Daten</Heading>
@@ -30,7 +30,7 @@ const DataPrivacyContent = () => {
                 </div>
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4">6. Ihre Rechte</Heading>
-                    <Paragraph className="item__text"> </Paragraph>
+                    <Paragraph className="item__text">Ihnen stehen grundsätzlich die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit, Widerruf und Widerspruch zu. Wenn Sie glauben, dass die Verarbeitung Ihrer Daten gegen das Datenschutzrecht verstösst oder Ihre datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, können Sie sich bei der Aufsichtsbehörde beschweren.</Paragraph>
                 </div>
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4">7. Urheberrechte</Heading>

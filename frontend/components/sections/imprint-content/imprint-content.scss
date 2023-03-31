@@ -1,0 +1,23 @@
+.imprint-content {
+    
+    &__heading {
+        margin-bottom: 32px;
+        text-align: center;;
+    }
+
+    &__content, .content {
+
+        &__item, .item {
+            margin-bottom: 32px;
+
+            &__link {
+                text-decoration: underline;
+                margin-top: 24px;
+                display: inline-block;
+            }
+
+        }
+
+    }
+
+}
