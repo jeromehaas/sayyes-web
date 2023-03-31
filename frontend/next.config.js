@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   images: {
-    domains: ['localhost', 'picsum.photos'],
+    domains: ['localhost', 'picsum.photos', 'sayyes-web-development.fra1.digitaloceanspaces.com'],
   },
 }
 

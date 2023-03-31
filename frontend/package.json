@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.10",
     "gsap": "^3.11.5",
     "js-cookie": "^3.0.1",
     "lottie-web": "^5.10.2",
