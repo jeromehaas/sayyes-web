@@ -22,10 +22,14 @@
 		
 		&__links, .links {
 			
-			&__item {
+			&__item, .item {
 				padding: 8px;
 				margin: 8px;
 				cursor: pointer;
+
+				&--active {
+					text-decoration: underline;
+				}
 			}
 			
 		}
