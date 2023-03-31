@@ -25,7 +25,7 @@ const DesktopNavigation = () => {
 					<Link className="links__item" href="/buy">Kaufen</Link>
 					<Link className="links__item" href="/sell">Verkaufen</Link>
 					<Link className="links__item" href="/about">About</Link>
-					<Link className="links__item" href="/">Kollektion</Link>
+					<Link className="links__item" href="/collection">Kollektion</Link>
 				</div>
 			</div>
 			<div className="desktop-navigation__placeholder"></div>

@@ -54,7 +54,7 @@ const MobileNavigation = () => {
 				<Link className="menu__item" href="/buy" onClick={ handleClick }>Kaufen</Link>
 				<Link className="menu__item" href="/sell" onClick={ handleClick }>Verkaufen</Link>
 				<Link className="menu__item" href="/about" onClick={ handleClick }>Über Uns</Link>
-				<Link className="menu__item" href="/" onClick={ handleClick }>Kollektion</Link>
+				<Link className="menu__item" href="/collection" onClick={ handleClick }>Kollektion</Link>
 			</div>
 			<div className="mobile-navigation__placeholder"></div>
 		</nav>
