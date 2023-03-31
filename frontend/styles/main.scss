@@ -1,5 +1,6 @@
 /* CONFIGS */
 @import 'styles/configs/reset.scss';
+@import 'styles/configs/scrollbar.scss';
 @import 'styles/configs/fonts.scss';
 @import 'styles/configs/variables.scss';
 @import 'styles/configs/typography.scss';
@@ -16,6 +17,7 @@
 @import 'components/blocks/desktop-navigation/desktop-navigation.scss';
 @import 'components/blocks/footer/footer.scss';
 @import 'components/blocks/mobile-navigation/mobile-navigation.scss';
+@import 'components/blocks/intro-animation/intro-animation.scss';
 
 /* LAYOUTS */
 @import 'components/layouts/section/section.scss';
