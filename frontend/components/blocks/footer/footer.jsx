@@ -27,8 +27,8 @@ const Footer = () => {
 				<div className="footer__box box">
 					<Heading className="box__heading" level="h2">Termin</Heading>
 					<div className="box__button-container">
-						<Button className="box__button">Kleid kaufen</Button>
-						<Button className="box__button">Kleid verkaufen</Button>
+						<Button className="box__button" href="/buy">Kleid kaufen</Button>
+						<Button className="box__button" href="/sell">Kleid verkaufen</Button>
 					</div>
 				</div>
 
