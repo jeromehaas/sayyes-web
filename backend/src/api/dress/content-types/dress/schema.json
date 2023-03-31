@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dresses",
+  "info": {
+    "singularName": "dress",
+    "pluralName": "dresses",
+    "displayName": "Dress"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "cover": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "images": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true,
+      "required": true
+    }
+  }
+}
