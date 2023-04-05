@@ -1,4 +1,4 @@
 module.exports = `
 Hallo SAYYES-Team.
-Eine neue Anfarge ist soeben eingegangen.
+Soeben ist eine neue Anfrage betreffend eines Termins eingegangen.
 `;
