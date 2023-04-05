@@ -57,7 +57,11 @@
                 border: 2px solid $blue-100;
                 background-color: $grey-60;
                 -webkit-appearance: none;
-								cursor: pointer;
+				cursor: pointer;
+
+                &[type="radio"] {
+                    border-radius: 50%;
+                }
 
                 &:checked {
                     background-color: $blue-100;
