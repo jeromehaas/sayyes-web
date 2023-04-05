@@ -22,7 +22,7 @@ const BuyForm = () => {
 
 		// APPEND DATA
 		const submission = new FormData();
-		submission.append('files.picture', values.picture[0]);
+		submission.append('files.picture', values['picture'][0]);
 		submission.append('data', JSON.stringify({
 			firstname: values['firstname'],
 			lastname: values['lastname'],
@@ -34,7 +34,7 @@ const BuyForm = () => {
 			weddingDate: values['wedding-date'],
 			budget: values['budget'],
 			selection: values['selection'],
-			weekday: values['weekday'].toString(),
+			weekday: values['weekday'].toString().replace(/,/g, '/'),
 			package: values['package'],
 		}));
 
@@ -79,8 +79,8 @@ const BuyForm = () => {
 
 				<fieldset className="container__try-on try-on">
 					<Heading className="try-on__heading">Anprobe</Heading>
-					<InputSelection className="try-on__weekday" label="An diesn Tagen geht es mir am besten:" id="weekday" register={ register } header="Wähle einen Wochentag" name="weekday" type="checkbox" errors={ formState.errors } validation={{ validate: (value) => value.length > 0 }} errorText="Dieses Feld ist erforderlich" options={[ { id: "monday", value: "monday", label: "Montag",  },{ id: "tuesday", value: "tuesday", label: "Dienstag",  },{ id: "wednesday", value: "wednesday", label: "Mittwoch",  },{ id: "thursday", value: "thursday", label: "Donnerstag",  },{ id: "friday", value: "friday", label: "Freitag",  },{ id: "saturday", value: "saturday", label: "Samstag",  },{ id: "sunday", value: "sunday", label: "Sonntag" }]}/>
-					<InputSelection className="try-on__package" label="Welche Anprobe wünsche ich mir?" id="package" register={ register } header="Anprobepaket" name="package" type="radio" errors={ formState.errors } validation={{ validate: (value) => value !== null }} errorText="Dieses Feld ist erforderlich" options={[ { id: "fun-and-friends", value: "fun-and-friends", label: "Fun & Friends", info: '(75.-)' },{ id: "Bubbles, Food & Friends", value: "bubbles-food-and-friends", label: "Bubbles, Food & Friends", info: '(75.- + 15.- pro Person)'  },]}/>
+					<InputSelection className="try-on__weekday" label="An diesen Tagen geht es mir am besten:" id="weekday" register={ register } header="Wähle einen Wochentag" name="weekday" type="checkbox" errors={ formState.errors } validation={{ validate: (value) => value.length > 0 }} errorText="Dieses Feld ist erforderlich" options={[ { id: "monday", value: "Montag", label: "Montag",  },{ id: "tuesday", value: "Dienstag", label: "Dienstag",  },{ id: "wednesday", value: "Mittwoch", label: "Mittwoch",  },{ id: "thursday", value: "Donnerstag", label: "Donnerstag",  },{ id: "friday", value: "Freitag", label: "Freitag",  },{ id: "saturday", value: "Samstag", label: "Samstag",  },{ id: "sunday", value: "Sonntag", label: "Sonntag" }]}/>
+					<InputSelection className="try-on__package" label="Welche Anprobe wünsche ich mir?" id="package" register={ register } header="Anprobepaket" name="package" type="radio" errors={ formState.errors } validation={{ validate: (value) => value !== null }} errorText="Dieses Feld ist erforderlich" options={[ { id: "fun-and-friends", value: "Fun and Friends", label: "Fun & Friends", info: '(75.-)' },{ id: "bubbles-food-and-friends", value: "Bubbles, Food & Friends", label: "Bubbles, Food & Friends", info: '(75.- + 15.- pro Person)'  },]}/>
 				</fieldset>
 
 				<fieldset className="container__upload upload">
