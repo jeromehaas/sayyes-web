@@ -7,7 +7,6 @@ const InputSelection = ({ className, options, errors, id, label, validation, reg
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
-        console.log('click')
         setIsOpen(!isOpen);
     };
 
