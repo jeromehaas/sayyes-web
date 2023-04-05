@@ -5,22 +5,56 @@ import InputText from "components//inputs/input-text/input-text";
 import InputSelection from "components//inputs/input-selection/input-selection";
 import InputFile from "components//inputs/input-file/input-file";
 import InputSubmit from "components//inputs/input-submit/input-submit";
+import axios from "axios";
 import { useForm } from "react-hook-form";
+import { useNotifierStore } from "stores/notifier";
 
 const SellForm = () => {
 
-	// BRING IN REACT-HOOK-FORM
-	const { register, handleSubmit, getValues, formState } = useForm();
+	// BRING IN STORE
+	const { showNotifier } = useNotifierStore();
 
+	// BRING IN REACT-HOOK-FORM
+	const { register, handleSubmit, reset, formState } = useForm();
 
 	// HANDLE DISPATCH
-	const handleDispatch = (data, event) => {
-		console.log(data);
+	const handleDispatch = async (values) => {
+
+		// APPEND DATA
+		const submission = new FormData();
+		submission.append('files.picture', values['picture'][0]);
+		submission.append('data', JSON.stringify({
+			firstname: values['firstname'],
+			lastname: values['lastname'],
+			street: values['street'],
+			town: values['town'],
+			email: values['email'],
+			phone: values['phone'],
+			brand: values['brand'],
+			buyDate: values['buy-date'],
+			size: values['size'],
+			originalPrice: values['original-price'],
+			sellPrice: values['sell-price'],
+		}));
+
+		// DISPATCH FORM SUBMISSION
+		const response = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/dress-requests`, submission);
+
+		// HANDLE SUCCESS CASE
+		if (response.status === 200) {
+			showNotifier({ message: 'Die Nachricht wurde erfolgreich übermittelt', type: 'success', isVisible: 'true' });
+			reset();
+
+		// HANDLE ERROR CASE
+		} else {
+			showNotifier({ message: 'Die Nachricht konnte nicht übermittelt werden', type: 'error', isVisible: 'true' });
+		};
+
 	};
 
 	return (
 		<Section className="sell-form">
-			<form className="sell-form__container container" onSubmit={ handleSubmit((data, event) => handleDispatch(data, event))}>
+			<form className="sell-form__container container" onSubmit={ handleSubmit((values) => handleDispatch(values))}>
 				<Heading className="container__heading">Kontakt</Heading>
 				<Picture  className="container__picture" src="/images/placeholder/placeholder.png" alt="image" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
 				

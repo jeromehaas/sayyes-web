@@ -6,8 +6,6 @@ const Notifier = () => {
 
     // BRING IN STORE
     const { message, type, isVisible } = useNotifierStore();
-    console.log(message);
-
 
     return (
         <div className={`notifier ${ isVisible ? 'notifier--visible' : ''}`}>

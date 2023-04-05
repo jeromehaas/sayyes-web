@@ -7,7 +7,6 @@ import InputFile from "components//inputs/input-file/input-file";
 import InputSubmit from "components//inputs/input-submit/input-submit";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import { useState } from 'react';
 import { useNotifierStore } from "stores/notifier";
 
 const BuyForm = () => {
@@ -25,25 +24,25 @@ const BuyForm = () => {
 		const submission = new FormData();
 		submission.append('files.picture', values.picture[0]);
 		submission.append('data', JSON.stringify({
-			firstname: values.firstname,
-			lastname: values.firstname,
-			street: values.street,
-			town: values.town,
-			email: values.email,
-			phone: values.phone,
-			size: values.size,
+			firstname: values['firstname'],
+			lastname: values['lastname'],
+			street: values['street'],
+			town: values['town'],
+			email: values['email'],
+			phone: values['phone'],
+			size: values['size'],
 			weddingDate: values['wedding-date'],
-			budget: values.budget,
-			selection: values.selection,
+			budget: values['budget'],
+			selection: values['selection'],
 			weekday: values['weekday'].toString(),
-			package: values.package
+			package: values['package'],
 		}));
 
 		// DISPATCH FORM SUBMISSION
-		const res = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/appointment-requests`, submission);
+		const response = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/appointment-requests`, submission);
 
 		// HANDLE SUCCESS CASE
-		if (res.status === 200) {
+		if (response.status === 200) {
 			showNotifier({ message: 'Die Nachricht wurde erfolgreich übermittelt', type: 'success', isVisible: 'true' });
 			reset();
 

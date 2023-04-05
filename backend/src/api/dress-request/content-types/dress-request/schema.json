@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "dress_requests",
+  "info": {
+    "singularName": "dress-request",
+    "pluralName": "dress-requests",
+    "displayName": "Dress Request"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "street": {
+      "type": "string"
+    },
+    "town": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "string",
+      "required": true
+    },
+    "buyDate": {
+      "type": "string",
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "required": true
+    },
+    "originalPrice": {
+      "type": "integer",
+      "required": true
+    },
+    "sellPrice": {
+      "type": "string",
+      "required": true
+    },
+    "picture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
