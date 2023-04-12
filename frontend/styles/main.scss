@@ -23,6 +23,7 @@
 /* LAYOUTS */
 @import 'components/layouts/section/section.scss';
 @import 'components/layouts/page/page.scss';
+@import 'components/layouts/blank-page/blank-page.scss';
 
 /* INPUTS */
 @import 'components/inputs/input-text/input-text.scss';
@@ -42,3 +43,4 @@
 @import 'components/sections/data-privacy-content/data-privacy-content.scss';
 @import 'components/sections/imprint-content/imprint-content.scss';
 @import 'components/sections/error/error.scss';
+@import 'components/sections/login-form/login-form.scss';

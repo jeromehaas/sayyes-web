@@ -44,8 +44,8 @@ const Gallery = ({ data }) => {
             <div className="gallery__collection collection">
                 { data && data.map((image, index) => (
                     <div className="collection__item item" onClick={ () => handleClick(index) } key={ index }>
-                        <Heading className="item__heading">{ image.attributes.name }</Heading>
-                        <Picture  className="item__picture" src={ image.attributes.cover.data.attributes.formats.large.url } alt="image" figure={{ form: "down", position: 'center', borderColor: 'grey' }}	 />
+                        <Heading className="item__heading" level="h2">{ image.attributes.name }</Heading>
+                        <Picture  className="item__picture" src={ image.attributes.cover.data.attributes.formats.large.url } alt="image" figure={{ form: 'down', position: 'center', borderColor: 'blue' }}	 />
                     </div>
                 ))}
             </div>

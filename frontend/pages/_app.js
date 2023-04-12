@@ -1,12 +1,15 @@
 import 'styles/main.scss';
-import Page from 'components//layouts/page/page';
+import ProtectedRoutes from 'utils/protected-routes';
+import { AuthProvider } from 'contexts/auth/auth';
 
 const App = ({ Component, pageProps }) => {
 
   return (
-		<Page>
-    	<Component {...pageProps} />
-		</Page>
+	<AuthProvider>
+		<ProtectedRoutes>
+			<Component {...pageProps} />
+		</ProtectedRoutes>
+	</AuthProvider>
   );
 
 };

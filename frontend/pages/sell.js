@@ -6,10 +6,10 @@ import SellForm from "components//sections/sell-form/sell-form";
 const Sell = () => {
 
     return (
-        <Fragment>
+        <Page>
             <SellIntro />
             <SellForm />
-        </Fragment>
+        </Page>
     );
 
 };

@@ -7,9 +7,9 @@ import client from "graphql/client";
 const Collection = ({ data }) => {
 
     return (
-        <Fragment>
+        <Page>
             <Gallery data={ data.dresses } />
-        </Fragment>
+        </Page>
     );
 
 };

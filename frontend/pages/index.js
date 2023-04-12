@@ -5,9 +5,9 @@ import { Fragment } from "react";
 const Start = ( ) => {
 
   return (
-		<Fragment>
+		<Page>
 			<Hero />
-		</Fragment>
+		</Page>
   );
 
 };

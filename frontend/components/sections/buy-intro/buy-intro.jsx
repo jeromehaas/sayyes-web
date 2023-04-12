@@ -8,7 +8,7 @@ const BuyIntro = () => {
 	return (
 		<Section className="buy-intro">
 			<Heading className="buy-intro__heading" level="h1">Kaufe dein Brautkleid</Heading>
-			<Picture  className="buy-intro__picture" src="/images/placeholder/placeholder.png" alt="image" figure={{ form: "up", position: 'top-left', borderColor: 'blue', ordinate: 'back', backgroundColor: 'blue' }}	 />
+			<Picture  className="buy-intro__picture" src="/images/general/general-01.webp" alt="image" figure={{ form: "up", position: 'top-left', borderColor: 'blue', ordinate: 'back', backgroundColor: 'blue' }}	 />
 			<div className="buy-intro__text text">
 					<Paragraph className="text__item">Wenn du einem Brautkleid eine zweite Chance geben möchtest, bist du bei SayYes genau richtig. Wähle aus unserer Kollektion deinen Stil aus und wir werden dir dieses und weitere Kleider, welche deinen Wünschen entsprechen, zu deinem Anprobe-Termin nach Hause bringen.</Paragraph>
 					<Paragraph className="text__item">Wir planen diesen besonderen Event gerne nach deinen Vorstellungen. Sei es mit dir alleine, im kleinen Familien- und Freundeskreis (Fun & Friends) oder wir zelebrieren die Anprobe gleich mit Champagner und feiner Mezze (Bubbles, Food & Friends).</Paragraph>

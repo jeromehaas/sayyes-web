@@ -57,7 +57,7 @@ const BuyForm = () => {
 		<Section className="buy-form">
 			<form className="buy-form__container container" onSubmit={ handleSubmit((values) => handleDispatch(values))}>
 				<Heading className="container__heading">Kontakt</Heading>
-				<Picture  className="container__picture" src="/images/placeholder/placeholder.png" alt="image" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
+				<Picture  className="container__picture" src="/images/general/general-03.webp" alt="image" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
 				
 				<fieldset className="container__personal-data personal-data">
 					<Heading className="personal-data__heading">Personalien</Heading>

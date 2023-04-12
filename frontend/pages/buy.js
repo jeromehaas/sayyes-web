@@ -8,10 +8,10 @@ import BuyForm from "components//sections/buy-form/buy-form";
 const Buy = () => {
 
 	return (
-		<Fragment>
+		<Page>
 			<BuyIntro />
 			<BuyForm />
-		</Fragment>
+		</Page>
 
 	)
 

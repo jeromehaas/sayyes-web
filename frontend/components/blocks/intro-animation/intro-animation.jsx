@@ -28,7 +28,7 @@ const IntroAnimation = () => {
     useEffect(() => {
         const context = gsap.context(() => {
             shortIntroAnimationTimelineRef.current = gsap.timeline({ paused: true });
-            shortIntroAnimationTimelineRef.current.to('.intro-animation .intro-animation__inner', { opacity: 0, duration: 1.5 }, 0);
+            shortIntroAnimationTimelineRef.current.to('.intro-animation .intro-animation__inner', { opacity: 0, duration: 0 }, 0);
             shortIntroAnimationTimelineRef.current.to('.intro-animation .intro-animation__inner', { display:  'none', duration: 0 });
         }, introAnimationRef);
         return () => context.revert();

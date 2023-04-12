@@ -15,7 +15,7 @@ const Page = ({ children }) => {
 			<Footer />
 			<IntroAnimation />
 		</div>
-	)
+	);
 
 };
 

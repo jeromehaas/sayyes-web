@@ -5,9 +5,9 @@ import { Fragment } from "react";
 const About = () => {
 
     return  (
-        <Fragment>
+        <Page>
             <AboutIntro />
-        </Fragment>
+        </Page>
     );
 
 };
