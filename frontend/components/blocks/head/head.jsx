@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 const Head = ({ meta }) => {
 
-console.log(meta);
-
     return (
      <NextHead>
         <title>{`${ meta.title } | SAYYES`}</title>

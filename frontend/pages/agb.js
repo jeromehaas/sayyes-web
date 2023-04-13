@@ -4,7 +4,7 @@ import Page from "components/layouts/page/page";
 const Agb = () => {
 
     return (
-        <Page meta={{ title: 'Allgemeine Geschäftsbedingungen'}}>
+        <Page meta={{ title: 'AGB'}}>
             <AgbContent />
         </Page>
     );

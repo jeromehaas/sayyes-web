@@ -6,7 +6,7 @@ import Page from "components/layouts/page/page";
 const Imprint = () => {
 
     return (
-        <Page meta={{ title: 'Impressum', description: 'SayYes KLG • Blumenrainstrasse 1 • 6032 Emmen • hallo@sayyes-bridal.ch' }}>
+        <Page meta={{ title: 'Impressum', description: 'SayYes KLG • Blumenrainstrasse 1 • 6032 Emmen • hallo@sayes-bridal.ch' }}>
             <ImprintContent />
         </Page>
     );
