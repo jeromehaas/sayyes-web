@@ -45,7 +45,7 @@ const Gallery = ({ data }) => {
                 { data && data.map((image, index) => (
                     <div className="collection__item item" onClick={ () => handleClick(index) } key={ index }>
                         <Heading className="item__heading" level="h2">{ image.attributes.name }</Heading>
-                        <Picture  className="item__picture" src={ image.attributes.cover.data.attributes.formats.large.url } alt="image" figure={{ form: 'down', position: 'center', borderColor: 'blue' }}	 />
+                        <Picture  className="item__picture" src={ image.attributes.cover.data.attributes.formats.large.url } alt="Brautkleid" figure={{ form: 'down', position: 'center', borderColor: 'blue' }}	 />
                     </div>
                 ))}
             </div>
@@ -60,7 +60,7 @@ const Gallery = ({ data }) => {
                     <div className="slider__content"> 
                         <img className="content__navigation navigation--left" src="/icons/slider/icon-caret-left.svg" alt="Caret" onClick={ handlePrevious} />
                         <div className="content__container">
-                            <img className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex].attributes.formats.large.url } alt="Placeholder" />
+                            <img className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex].attributes.formats.large.url } alt="Brautkleid" />
                         </div>
                         <img className="content__navigation navigation--left" src="/icons/slider/icon-caret-right.svg" alt="Caret" onClick={ handleNext } />
                     </div>
