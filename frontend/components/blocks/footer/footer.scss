@@ -26,6 +26,10 @@
 		}
 
 		&__item, .item {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 
 			&__link {
 
@@ -33,8 +37,13 @@
 
 			&__text {
 				text-align: center;
-        font-family: "Beausite-Slick", Arial, sans-serif;
+        		font-family: "Beausite-Slick", Arial, sans-serif;
 			}
+
+			&__image {
+				margin: 16px auto 0 auto;
+			}
+
 		}
 
 		&:last-child {

@@ -2,6 +2,7 @@ import Heading from "components/content/heading/heading";
 import Paragraph from "components//content/paragraph/paragraph";
 import Link from "next/link";
 import Button from "components//content/button/button";
+import Image from "next/image";
 
 const Footer = () => {
 
@@ -47,6 +48,11 @@ const Footer = () => {
 					<div className="box__item item">
 						<Link className="item__link" href="/agb">
 							<Paragraph className="item__text">AGB</Paragraph>
+						</Link>	
+					</div>
+					<div className="box__item item">
+						<Link className="item__link" href="https://www.instagram.com/sayyes_bridal/" target="_blank">
+							<Image className="item__image" src="/icons/social-media/instagram.svg" width={ 40 } height={ 40 } alt="Instagram"  />
 						</Link>	
 					</div>
 				</div>

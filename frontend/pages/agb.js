@@ -1,5 +1,5 @@
 import AgbContent from "components//sections/agb-content/agb-content";
-import { Fragment } from "react";
+import Page from "components/layouts/page/page";
 
 const Agb = () => {
 
