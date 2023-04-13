@@ -4,9 +4,9 @@ import { Fragment } from "react";
 const Agb = () => {
 
     return (
-        <Fragment>
+        <Page>
             <AgbContent />
-        </Fragment>
+        </Page>
     );
 
 };

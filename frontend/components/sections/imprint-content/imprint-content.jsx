@@ -26,7 +26,7 @@ const ImprintContent = () => {
                 </div>
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4">Urheberrechte</Heading>
-                    <Paragraph className="item__text"></Paragraph>Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich der oben genannten Firma/Person oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.
+                    <Paragraph className="item__text">Die Urheber- und alle anderen Rechte an Inhalten, Bildern, Fotos oder anderen Dateien auf der Website gehören ausschliesslich der oben genannten Firma/Person oder den speziell genannten Rechtsinhabern. Für die Reproduktion jeglicher Elemente ist die schriftliche Zustimmung der Urheberrechtsträger im Voraus einzuholen.</Paragraph>
                 </div>
 
             </div>
