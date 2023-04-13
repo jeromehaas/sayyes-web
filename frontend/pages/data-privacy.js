@@ -5,7 +5,7 @@ import { Fragment } from "react";
 const DataPrivacy = () => {
 
     return (
-        <Page>
+        <Page meta={{ title: 'Datenschutz', description: 'Bei einem Besuch dieser Website erheben wir keine personenbezogenen Daten von Ihnen. Personenbezogene Daten werden nur erhoben, wenn Sie uns diese selbst über unser Kontaktformular mitteilen.' }}>
             <DataPrivacyContent />
         </Page>
     );

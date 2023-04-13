@@ -5,7 +5,7 @@ import { Fragment } from "react";
 const About = () => {
 
     return  (
-        <Page>
+        <Page meta={{ title: 'About', description: 'SayYes steht für Nachhaltigkeit und Schönheit. Unser oberstes Ziel ist es, dir den Kauf deines Brautkleides als unvergessliches Erlebnis zu gestalten.' }}>
             <AboutIntro />
         </Page>
     );

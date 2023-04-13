@@ -5,7 +5,7 @@ import BlankPage from "components/layouts/blank-page/blank-page";
 const Login = () => {
 
     return (
-        <BlankPage>
+        <BlankPage meta={{ title: 'Login' }}>
             <LoginForm /> 
         </BlankPage>
     )

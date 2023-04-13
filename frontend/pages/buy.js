@@ -8,7 +8,7 @@ import BuyForm from "components//sections/buy-form/buy-form";
 const Buy = () => {
 
 	return (
-		<Page>
+		<Page meta={{ title: 'Kaufen', description: 'Wenn du einem Brautkleid eine zweite Chance geben möchtest, bist du bei SayYes genau richtig. Wähle aus unserer Kollektion deinen Stil aus und wir werden dir dieses und weitere Kleider, welche deinen Wünschen entsprechen, zu deinem Anprobe-Termin nach Hause bringen.'  }}>
 			<BuyIntro />
 			<BuyForm />
 		</Page>

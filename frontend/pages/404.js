@@ -1,9 +1,12 @@
- import Error from "components/sections/error/error";
+ import BlankPage from "components/layouts/blank-page/blank-page";
+import Error from "components/sections/error/error";
 
 const PageNotFound = () => {
 
     return (
-        <Error />
+        <BlankPage meta={{ title: '404' }}>
+            <Error />
+        </BlankPage>
     )
 
 };
