@@ -3,6 +3,7 @@
 
     &__label {
         color: $grey-60;
+        margin-bottom: 16px;
     }
 
     &__header, .header {
@@ -13,7 +14,7 @@
         padding: 4px 8px;
         background-color: $grey-60;
         border-radius: 4px;        
-				cursor: pointer;
+		cursor: pointer;
 
         &__text {
             color: $blue-100;

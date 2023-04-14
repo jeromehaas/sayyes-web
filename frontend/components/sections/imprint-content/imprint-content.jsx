@@ -14,7 +14,7 @@ const ImprintContent = () => {
                     <Paragraph className="item__text">SayYes KLG</Paragraph>
                     <Paragraph className="item__text">Blumenrainstrasse 1</Paragraph>
                     <Paragraph className="item__text">6032 Emmen</Paragraph>
-                    <Link className="item__link" href="mailto:hallo@sayyes-bridal.ch"><Paragraph className="item__text">hallo@sayyes-bridal.ch</Paragraph></Link>
+                    <Link className="item__link" href="mailto:yes@sayyes-bridal.ch"><Paragraph className="item__text">yes@sayyes-bridal.ch</Paragraph></Link>
                 </div>
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4">Haftungsausschluss</Heading>

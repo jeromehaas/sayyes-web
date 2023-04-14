@@ -75,7 +75,7 @@ const MobileNavigation = () => {
 				<Link className="menu__item" href="/" onClick={ (event) => navigate(event, '/') }>Home</Link>
 				<Link className="menu__item" href="/buy" onClick={ (event) => navigate(event, '/buy') }>Kaufen</Link>
 				<Link className="menu__item" href="/sell" onClick={ (event) => navigate(event, '/sell') }>Verkaufen</Link>
-				<Link className="menu__item" href="/about" onClick={ (event) => navigate(event, '/about') }>Über Uns</Link>
+				<Link className="menu__item" href="/about" onClick={ (event) => navigate(event, '/about') }>About</Link>
 				<Link className="menu__item" href="/collection" onClick={ (event) => navigate(event, '/collection') }>Kollektion</Link>
 			</div>
 			<div className="mobile-navigation__placeholder"></div>
