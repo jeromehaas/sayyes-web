@@ -3,6 +3,7 @@ import Heading from "components//content/heading/heading";
 import Picture from "components//content/picture/picture";
 import Paragraph from "components//content/paragraph/paragraph";
 import { useState } from 'react';
+import Image from "next/image";
 
 const Gallery = ({ data }) => {
 
@@ -44,7 +45,7 @@ const Gallery = ({ data }) => {
             <div className="gallery__collection collection">
                 { data && data.map((image, index) => (
                     <div className="collection__item item" onClick={ () => handleClick(index) } key={ index }>
-                        <Heading className="item__heading" level="h2">{ image.attributes.name }</Heading>
+                        <Heading className="item__heading" level="h4">{ image.attributes.name }</Heading>
                         <Picture  className="item__picture" src={ image.attributes.cover.data.attributes.formats.large.url } alt="Brautkleid" figure={{ form: 'down', position: 'center', borderColor: 'blue' }}	 />
                     </div>
                 ))}
@@ -52,21 +53,17 @@ const Gallery = ({ data }) => {
             { sliderIsVisible && (
                 <div className="gallery__slider slider">
                     <div className="slider__header header">
-                        <Heading className="header__heading">{ data[categoryIndex].attributes.name }</Heading>
+                        <Heading className="header__heading" level="h4">{ data[categoryIndex].attributes.name }</Heading>
                         <button className="header__back back" onClick={ handleClose }>
-                            <img className="back__icon" src="/icons/slider/icon-close.svg" alt="Arrow" />
+                            <Image className="back__icon" src="/icons/slider/icon-close.svg" alt="Arrow" width={ 24 } height={ 24 } />
                         </button>      
                     </div>
                     <div className="slider__content"> 
                         <img className="content__navigation navigation--left" src="/icons/slider/icon-caret-left.svg" alt="Caret" onClick={ handlePrevious} />
                         <div className="content__container">
-                            <img className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex].attributes.formats.large.url } alt="Brautkleid" />
+                            <Image className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex].attributes.formats.large.url } width={ 1800 } height={ 1200 } alt="Brautkleid" />
                         </div>
-                        <img className="content__navigation navigation--left" src="/icons/slider/icon-caret-right.svg" alt="Caret" onClick={ handleNext } />
-                    </div>
-                    <div className="slider__footer footer">
-                        <div className="footer__download download">
-                        </div>
+                        <img className="content__navigation navigation--right" src="/icons/slider/icon-caret-right.svg" alt="Caret" onClick={ handleNext } />
                     </div>
                 </div>
             )}

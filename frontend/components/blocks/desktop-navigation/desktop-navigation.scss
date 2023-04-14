@@ -9,10 +9,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 144px;
 		background-color: $white-100;
 		z-index: 50;
 		transition: all 0.5s ease;
+		height: 144px;
 		
 		&__logo {
 			height: 40px;
@@ -24,7 +24,7 @@
 			
 			&__item, .item {
 				padding: 8px;
-				margin: 8px;
+				margin: 12px;
 				cursor: pointer;
 
 				&--active {

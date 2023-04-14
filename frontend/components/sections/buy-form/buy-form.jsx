@@ -60,17 +60,17 @@ const BuyForm = () => {
 				<Picture  className="container__picture" src="/images/general/general-03.webp" alt="Brautkleid" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
 				
 				<fieldset className="container__personal-data personal-data">
-					<Heading className="personal-data__heading">Personalien</Heading>
+					<Heading className="personal-data__heading" level="h3">Personalien</Heading>
 					<InputText className="personal-data__input personal-data__input--firstname" id="firstname" label="Vorname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
 					<InputText className="personal-data__input personal-data__input--lastname" id="lastname" label="Nachname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--street" id="street" label="Adresse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--town" id="town" label="PLZ, Ort" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--email" id="email" label="Email" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefon-Nummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefonnummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 				</fieldset>
 				
 				<fieldset className="container__dress dress">
-					<Heading className="dress__heading">Dein Traumkleid</Heading>
+					<Heading className="dress__heading" level="h3">Dein Traumkleid</Heading>
 					<InputText className="dress__input dress__input--size" label="Deine Kleidergrösse" id="size" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
 					<InputText className="dress__input dress__input--wedding-date" label="Hochzeitsdatum" id="wedding-date" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
 					<InputText className="dress__input dress__input--budget" label="Budget" id="budget" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
@@ -78,13 +78,13 @@ const BuyForm = () => {
 				</fieldset>
 
 				<fieldset className="container__try-on try-on">
-					<Heading className="try-on__heading">Anprobe</Heading>
+					<Heading className="try-on__heading" level="h3">Anprobe</Heading>
 					<InputSelection className="try-on__weekday" label="An diesen Tagen geht es mir am besten:" id="weekday" register={ register } header="Wähle einen Wochentag" name="weekday" type="checkbox" errors={ formState.errors } validation={{ validate: (value) => value.length > 0 }} errorText="Dieses Feld ist erforderlich" options={[ { id: "monday", value: "Montag", label: "Montag",  },{ id: "tuesday", value: "Dienstag", label: "Dienstag",  },{ id: "wednesday", value: "Mittwoch", label: "Mittwoch",  },{ id: "thursday", value: "Donnerstag", label: "Donnerstag",  },{ id: "friday", value: "Freitag", label: "Freitag",  },{ id: "saturday", value: "Samstag", label: "Samstag",  },{ id: "sunday", value: "Sonntag", label: "Sonntag" }]}/>
 					<InputSelection className="try-on__package" label="Welche Anprobe wünsche ich mir?" id="package" register={ register } header="Anprobepaket" name="package" type="radio" errors={ formState.errors } validation={{ validate: (value) => value !== null }} errorText="Dieses Feld ist erforderlich" options={[ { id: "fun-and-friends", value: "Fun and Friends", label: "Fun & Friends", info: '(75.-)' },{ id: "bubbles-food-and-friends", value: "Bubbles, Food & Friends", label: "Bubbles, Food & Friends", info: '(75.- + 15.- pro Person)'  },]}/>
 				</fieldset>
 
 				<fieldset className="container__upload upload">
-					<Heading className="upload__heading">Dein Foto</Heading>
+					<Heading className="upload__heading" level="h3">Dein Foto</Heading>
 					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } readOnly />
 				</fieldset> 
 

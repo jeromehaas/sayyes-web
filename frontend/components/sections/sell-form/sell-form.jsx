@@ -59,17 +59,17 @@ const SellForm = () => {
 				<Picture  className="container__picture" src="/images/placeholder/placeholder.png" alt="Brautkleid" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
 				
 				<fieldset className="container__personal-data personal-data">
-					<Heading className="personal-data__heading">Personalien</Heading>
+					<Heading className="personal-data__heading" level="h3">Personalien</Heading>
 					<InputText className="personal-data__input personal-data__input--firstname" id="firstname" label="Vorname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
 					<InputText className="personal-data__input personal-data__input--lastname" id="lastname" label="Nachname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--street" id="street" label="Adresse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--town" id="town" label="PLZ, Ort" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--email" id="email" label="Email" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefon-Nummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefonnummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 				</fieldset>
 				
 				<fieldset className="container__dress dress">
-					<Heading className="dress__heading">Zum Kleid</Heading>
+					<Heading className="dress__heading" level="h3">Zum Kleid</Heading>
 					<InputText className="dress__input dress__input--brand" id="brand" label="Marke" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
 					<InputText className="dress__input dress__input--buy-date" id="buy-date" label="Kaufdatum" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />

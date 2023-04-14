@@ -1,7 +1,7 @@
 .picture {
     position: relative;
     width: 320px;
-    height: 400px;
+    height: 480px;
 
     &__source {
         position: absolute;
@@ -17,7 +17,7 @@
         display: none;
         position: absolute;
         display: block;
-        border-width: 3px;
+        border-width: 2px;
         border-style: solid;
         border-color: transparent;
         top: 0;
@@ -27,122 +27,110 @@
         z-index: 10;
     }
 
-        &[data-figure-form="up"] {
+    &[data-figure-form="up"] {
 
-            & .figure {
-                border-radius: 200px 200px 0 0;
-            }
-
-            & .source {
-                border-radius: 200px 200px 0 0;
-            }
-
-        }
-        
-        &[data-figure-form="down"] {
-
-            & .figure {
-                border-radius: 0 0 200px 200px;
-            }
-
-            & .source {
-                border-radius: 0 0 200px 200px;
-            }
-
+        & .figure,
+        & .source {
+            border-radius: 200px 200px 0 0;
         }
 
-        &[data-figure-form="sym"] {
+    }
+    
+    &[data-figure-form="down"] {
 
-            & .figure {
-                border-radius: 40px 40px 40px 40px;
-            }
-
-            & .source {
-                border-radius: 40px 40px 40px 40px;
-            }
-
+        & .figure,
+        & .source {
+            border-radius: 0 0 200px 200px;
         }
 
+    }
 
-        &[data-figure-position="top-left"] {
+    &[data-figure-form="sym"] {
 
-            .figure {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-            }
-
-            .source {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                top: 40px;
-                left: 40px
-            }
-
+        & .figure,
+        & .source {
+            border-radius: 32px 32px 32px 32px;
         }
 
-        &[data-figure-position="bottom-right"] {
+    }
 
-            .figure {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                top: 40px;
-                left: 40px
-            }
 
-            .source {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-            }
+    &[data-figure-position="top-left"] {
 
+        .figure,
+        .source {
+            width: calc(100% - 32px);
+            height: calc(100% - 32px);
         }
 
-        &[data-figure-position="bottom-left"] {
-
-            .figure {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                top: 40px;
-            }
-
-            .source {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                left: 40px
-            }
-
+        .source {
+            top: 32px;
+            left: 32px
         }
 
-       &[data-figure-position="top-right"] {
+    }
 
-            .figure {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                left: 40px;
-            }
+    &[data-figure-position="bottom-right"] {
 
-            .source {
-                width: calc(100% - 40px);
-                height: calc(100% - 40px);
-                top: 40px;
-                left: 0px
-            }
-
+        .source,
+        .figure {
+            width: calc(100% - 32px);
+            height: calc(100% - 32px);
         }
 
-
-        &[data-figure-positoin="center"] {
-
-            .figure {
-                width: 100%;
-                height: 100%;
-            }
-
-            .source {
-                width: 100%;
-                height: 100%;
-            }
-
+        .figure {
+            top: 32px;
+            left: 32px
         }
+
+    }
+
+    &[data-figure-position="bottom-left"] {
+
+        .figure,
+        .source {
+            width: calc(100% - 32px);
+            height: calc(100% - 32px);
+        }
+
+        .figure {
+            top: 32px
+        }
+
+        .source {
+            left: 32px
+        }
+
+    }
+
+    &[data-figure-position="top-right"] {
+
+        .figure,
+        .source {
+            width: calc(100% - 32px);
+            height: calc(100% - 32px);
+        }
+
+        .figure {
+            left: 32px;
+        }
+
+        .source {
+            top: 32px;
+            left: 0px
+        }
+
+    }
+
+    &[data-figure-position="center"] {
+
+        .figure,
+        .source {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
 
     &[data-figure-background-color="blue"] {
 
@@ -193,10 +181,77 @@
 
     }
 
-		@media (max-width: 950px) {
-			width: 240px !important;
-			height: 320px !important;
-		}
+    @media (max-width: 950px) {
+        width: 240px;
+        height: 320px;
+
+        &[data-figure-position="top-left"] {
+
+            .figure,
+            .source {
+                width: calc(100% - 24px);
+                height: calc(100% - 24px);
+            }
+
+            .source {
+                top: 24px;
+                left: 24px
+            }
+
+        }
+
+        &[data-figure-position="bottom-right"] {
+
+            .source,
+            .figure {
+                width: calc(100% - 24px);
+                height: calc(100% - 24px);
+            }
+
+            .figure {
+                top: 24px;
+                left: 24px
+            }
+
+        }
+
+        &[data-figure-position="bottom-left"] {
+
+            .figure,
+            .source {
+                width: calc(100% - 24px);
+                height: calc(100% - 24px);
+            }
+
+            .figure {
+                top: 24px
+            }
+
+            .source {
+                left: 24px
+            }
+
+        }
+
+        &[data-figure-position="top-right"] {
+
+            .figure,
+            .source {
+                width: calc(100% - 24px);
+                height: calc(100% - 24px);
+            }
+
+            .figure {
+                left: 24px;
+            }
+
+            .source {
+                top: 24px;
+            }
+
+        }
+
+    }
 
 }
 

@@ -54,6 +54,7 @@
 				"heading"
 				"text";	
 			grid-template-columns: auto;
+			padding-bottom: 0;
 		}
 
 		&__picture {
@@ -62,6 +63,19 @@
 
 		&__heading {
 			text-align: left;;
+		}
+
+		&__heading {
+			margin-bottom: 0;
+			grid-area: heading;
+		}
+
+		&__text, .text {
+		
+			&__item, .item {
+				margin-bottom: 16px;
+			}
+
 		}
 
 	}

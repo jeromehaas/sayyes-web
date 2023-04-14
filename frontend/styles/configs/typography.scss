@@ -5,43 +5,39 @@
 }
 
 .heading {
-    font-size: 45px;
-    letter-spacing: 7%;
-    font-family: "Beausite-Slick", Arial, sans-serif;
-    line-height: 1.5;
 
     &--h1 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 45px;
-        letter-spacing: 7%;
+        letter-spacing: 2px;
         line-height: 1.5;
     }
 
     &--h2 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 35px;
-        letter-spacing: 7%;
+        letter-spacing: 2px;
         line-height: 1.5;
     }
 
     &--h3 {
         font-family: "Beausite-Classic", Arial, sans-serif;
         font-size: 35px;
-        letter-spacing: 7%;
+        letter-spacing: 2px;
         line-height: 1.5;
     }
 
     &--h4 {
         font-family: "Beausite-Slick", Arial, sans-serif;
         font-size: 25px;
-        letter-spacing: 7%;
+        letter-spacing: 2px;
         line-height: 1.5;
     }
 
 }
 
 .paragraph {
-    font-size: 25px;
+    font-size: 24px;
     font-family: "Beausite-Classic", Arial, sans-serif;
     line-height: 1.5;
 
@@ -55,6 +51,16 @@
     font-size: 18px;
 }
 
+.desktop-navigation {
+    
+    .links__item {
+        font-size: 18px;
+        font-family: "Beausite-Classic", Arial, sans-serif;
+        letter-spacing: 1px;
+    }
+
+}
+
 .input-field {
 
     &__label, 
@@ -63,8 +69,12 @@
     }
 
     &__label {
-        margin-bottom: px;
         display: block;
+        font-size: 24px;
+    }
+
+    &__input {
+        font-size: 24px;
     }
 
     &__error {
@@ -74,8 +84,9 @@
     &__header, .header {
 
         &__text {
-            font-size: 18px;
+            font-size: 20px;
         }
+
     }
 
     &__menu, .menu {
@@ -108,8 +119,12 @@
 
 .footer {
 
+    .box__heading {
+        text-transform: uppercase;
+    }
+
 	.item__text {
-    font-family: "Beausite-Slick", Arial, sans-serif;
+        font-family: "Beausite-Slick", Arial, sans-serif;
 		font-size: 18px;
 	}
 
@@ -128,5 +143,119 @@
 		}
 
 	}
+
+}
+
+@media (max-width: 700px) {
+    
+    .heading {
+
+        &--h1 {
+            font-size: 35px;
+            letter-spacing: 1px;
+        }
+
+        &--h2 {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        &--h3 {
+            font-size: 25px;
+        }
+
+        &--h4 {
+            font-size: 25px;
+        }
+
+    }
+
+    .paragraph {
+        font-size: 20px;
+
+        &--small {
+            font-size: 15px;
+        }
+
+    }
+
+    .input-field {
+
+        &__label {
+            display: block;
+            font-size: 20px;
+        }
+
+        &__input {
+            font-size: 20px;
+        }
+    
+    }
+
+    .input-submit {
+
+        &__input {
+            font-size: 20px;
+        }
+
+    }
+
+}
+
+@media (max-width: 500px) {
+    
+    .heading {
+
+        &--h1 {
+            font-size: 25px;
+            letter-spacing: 1px;
+        }
+
+        &--h2 {
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        &--h3 {
+            font-size: 20px;
+        }
+
+        &--h4 {
+            font-size: 20px;
+        }
+
+    }
+
+    .paragraph {
+        font-size: 15px;
+    }
+
+    .input-field {
+
+        &__label {
+            font-size: 15px;
+        }
+
+        &__input {
+            font-size: 15px;
+        }
+
+        &__header, .header {
+
+            &__text {
+                font-size: 15px;
+            }
+
+        }
+    
+    }
+
+    .input-submit {
+
+        &__input {
+            font-size: 15px;
+        }
+
+    }
 
 }

@@ -15,6 +15,7 @@ const AboutIntro = () => {
             <div className="about-intro__text text">
                 <Paragraph className="text__item">SayYes steht für Nachhaltigkeit und Schönheit. Unser oberstes Ziel ist es, dir den Kauf deines Brautkleides als unvergessliches Erlebnis zu gestalten. Mit viel Liebe zum Detail, einer ehrlichen und persönlichen Beratung in privatem Umfeld und unserem geschulten Blick, werden wir dich auf der Suche nach dem perfekten Brautkleid begleiten. Wir sind Serena und Ramona, Freundinnen seit vielen Jahren und verbunden durch die Liebe zur Mode, Design und dem Besonderen. Mit SayYes möchten wir das Konsum- verhalten in der Brautmodeindustrie nachhaltig verändern und legen hier den Fokus vermehrt auf Kleider von namhaften Designern. Du wirst also auch das eine oder andere Haute Couture Kleid in unserer Kollektion finden.</Paragraph>
                 <Paragraph className="text__item">Wir sind Serena und Ramona, Freundinnen seit vielen Jahren und verbunden durch die Liebe zur Mode, Design und dem Besonderen. Mit SayYes möchten wir das Konsum- verhalten in der Brautmodeindustrie nachhaltig verändern und legen hier den Fokus vermehrt auf Kleider von namhaften Designern. Du wirst also auch das eine oder andere Haute Couture Kleid in unserer Kollektion finden.</Paragraph>
+                <Paragraph className="text__item text__item--center">Say Yes und gib einem Kleid eine zweite Chance.</Paragraph>
             </div>
         </Section> 
     );

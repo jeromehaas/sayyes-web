@@ -20,8 +20,6 @@
 			bottom: 120px;
 		}
 
-
-
 		&__heading {
 			grid-area: heading;
 			color: $blue-100;
@@ -30,7 +28,6 @@
 
 		&__picture {
 			grid-area: picture;
-			height: 400px;
 			align-self: start;
 			justify-self: start;
 		}
@@ -42,8 +39,7 @@
 			grid-gap: 24px;
 			
 			&__heading {
-				color: $white-100;
-				margin-bottom: 24px;
+				color: $grey-60;
 			}
 		
 			&__heading,
@@ -60,10 +56,8 @@
 			grid-template-columns: 1fr 1fr;
 			grid-gap: 24px;
 
-
 			&__heading {
-				color: $white-100;
-				margin-bottom: 24px;
+				color: $grey-60;
 			}
 
 			&__heading,
@@ -96,11 +90,6 @@
 			&__try-on, .try-on {
 				grid-template-columns: 1fr;
 				
-				&__heading  {
-					color: $white-100;
-					margin-bottom: 24px;
-				}
-
 				&__heading,
 				&__input  {
 					grid-column: span 1;
@@ -109,10 +98,6 @@
 			}
 
 		}
-
-
-
-
 
 	}
 
@@ -153,6 +138,23 @@
             }
 
 		}	
+
+	}
+
+	@media (max-width: 500px) {
+
+		&__container, .container {
+
+			& > * {
+				position: relative;
+				bottom: 80px;
+			}
+
+			&__heading {
+				margin-bottom: 16px;
+			}
+
+		}
 
 	}
 

@@ -10,7 +10,7 @@
 
     &__label { 
         grid-area: field__label;
-				color: $white-100;
+				color: $grey-60;
     }
 
     &__input {
@@ -20,7 +20,7 @@
         outline: none;
         background-color: transparent;
         color: $white-100;
-        border-bottom: 1px solid $white-100;
+        border-bottom: 1px solid $grey-60;
     }
 
     &__error {

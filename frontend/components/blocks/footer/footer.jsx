@@ -10,7 +10,7 @@ const Footer = () => {
 		<footer className="footer">
 			<div className="footer__inner">
 
-				<div className="footer__box box">
+				<div className="footer__box box box__contact">
 					<Heading className="box__heading" level="h2">Kontakt</Heading>
 					<div className="box__item item">
 						<Paragraph className="item__text">SayYes KLG</Paragraph>
@@ -25,7 +25,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="footer__box box">
+				<div className="footer__box box box__appointment">
 					<Heading className="box__heading" level="h2">Termin</Heading>
 					<div className="box__button-container">
 						<Button className="box__button" href="/buy">Kleid kaufen</Button>
@@ -33,7 +33,7 @@ const Footer = () => {
 					</div>
 				</div>
 
-				<div className="footer__box box">
+				<div className="footer__box box box__about-us">
 					<Heading className="box__heading" level="h2">Über Uns</Heading>
 					<div className="box__item item">
 						<Link className="item__link" href="/imprint">
@@ -46,8 +46,8 @@ const Footer = () => {
 						</Link>	
 					</div>
 					<div className="box__item item">
-						<Link className="item__link" href="/agb">
-							<Paragraph className="item__text">AGB</Paragraph>
+						<Link className="item__link" href="/faq">
+							<Paragraph className="item__text">FAQ</Paragraph>
 						</Link>	
 					</div>
 					<div className="box__item item">

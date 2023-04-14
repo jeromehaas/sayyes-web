@@ -51,7 +51,7 @@ const MobileNavigation = () => {
 			autoplay: false,
 			path: '/lotties/lottie-hamburger.json',
 		});
-		hamburgerRef.current.setSpeed(2.5);
+		// hamburgerRef.current.setSpeed(2.5);
 		return () => hamburgerRef.current.destroy();
 	}, []);
 

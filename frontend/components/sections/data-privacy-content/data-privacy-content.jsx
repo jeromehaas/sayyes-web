@@ -42,7 +42,7 @@ const DataPrivacyContent = () => {
                     <Paragraph className="item__text">SayYes KLG</Paragraph>
                     <Paragraph className="item__text">Blumenrainstrasse 1</Paragraph>
                     <Paragraph className="item__text">6032 Emmen</Paragraph>
-                    <Paragraph className="item__text">hallo@sayyes-bridal.ch</Paragraph>
+                    <Paragraph className="item__text">yes@sayyes-bridal.ch</Paragraph>
                 </div>
                 <div className="content__item item">
                     <Heading className="item__heading" level="h4"></Heading>
