@@ -15,7 +15,13 @@ const BuyForm = () => {
 	const { showNotifier } = useNotifierStore();
 
 	// BRING IN REACT-HOOK-FORM
-	const { register, handleSubmit, formState, reset } = useForm();
+	const { register, handleSubmit, formState, reset, watch, getValues } = useForm();
+
+	// GET VALUES 
+	const values = getValues();
+
+	// OBSERVE FIELDS
+	watch(['picture', 'weekday', 'package']);
 
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
@@ -79,13 +85,13 @@ const BuyForm = () => {
 
 				<fieldset className="container__try-on try-on">
 					<Heading className="try-on__heading" level="h3">Anprobe</Heading>
-					<InputSelection className="try-on__weekday" label="An diesen Tagen geht es mir am besten:" id="weekday" register={ register } header="Wähle einen Wochentag" name="weekday" type="checkbox" errors={ formState.errors } validation={{ validate: (value) => value.length > 0 }} errorText="Dieses Feld ist erforderlich" options={[ { id: "monday", value: "Montag", label: "Montag",  },{ id: "tuesday", value: "Dienstag", label: "Dienstag",  },{ id: "wednesday", value: "Mittwoch", label: "Mittwoch",  },{ id: "thursday", value: "Donnerstag", label: "Donnerstag",  },{ id: "friday", value: "Freitag", label: "Freitag",  },{ id: "saturday", value: "Samstag", label: "Samstag",  },{ id: "sunday", value: "Sonntag", label: "Sonntag" }]}/>
-					<InputSelection className="try-on__package" label="Welche Anprobe wünsche ich mir?" id="package" register={ register } header="Anprobepaket" name="package" type="radio" errors={ formState.errors } validation={{ validate: (value) => value !== null }} errorText="Dieses Feld ist erforderlich" options={[ { id: "fun-and-friends", value: "Fun and Friends", label: "Fun & Friends", info: '(75.-)' },{ id: "bubbles-food-and-friends", value: "Bubbles, Food & Friends", label: "Bubbles, Food & Friends", info: '(75.- + 15.- pro Person)'  },]}/>
+					<InputSelection className="try-on__weekday" label="An diesen Tagen geht es mir am besten:" id="weekday" value={ values['weekday']} register={ register } header="Wähle einen Wochentag" name="weekday" type="checkbox" errors={ formState.errors } validation={{ validate: (value) => value.length > 0 }} errorText="Dieses Feld ist erforderlich" options={[ { id: "monday", value: "Montag", label: "Montag",  },{ id: "tuesday", value: "Dienstag", label: "Dienstag",  },{ id: "wednesday", value: "Mittwoch", label: "Mittwoch",  },{ id: "thursday", value: "Donnerstag", label: "Donnerstag",  },{ id: "friday", value: "Freitag", label: "Freitag",  },{ id: "saturday", value: "Samstag", label: "Samstag",  },{ id: "sunday", value: "Sonntag", label: "Sonntag" }]}/>
+					<InputSelection className="try-on__package" label="Welche Anprobe wünsche ich mir?" id="package" value={ values['package']} register={ register } header="Anprobepaket" name="package" type="radio" errors={ formState.errors } validation={{ validate: (value) => value !== null }} errorText="Dieses Feld ist erforderlich" options={[ { id: "fun-and-friends", value: "Fun and Friends", label: "Fun & Friends", info: '(75.-)' },{ id: "bubbles-food-and-friends", value: "Bubbles, Food & Friends", label: "Bubbles, Food & Friends", info: '(75.- + 15.- pro Person)'  },]}/>
 				</fieldset>
 
 				<fieldset className="container__upload upload">
 					<Heading className="upload__heading" level="h3">Dein Foto</Heading>
-					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } readOnly />
+					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
 				</fieldset> 
 
 				<fieldset className="container__action action">

@@ -21,14 +21,10 @@ const SellForm = () => {
 	const values = getValues();
 
 	// OBSERVE FILES
-	const observedValues = {
-		picture: watch(['picture'])
-	}
+	watch(['picture']);
 
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
-
-
 
 		// APPEND DATA
 		const submission = new FormData();
@@ -88,7 +84,7 @@ const SellForm = () => {
 					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
 				</fieldset>
 
-          <fieldset className="container__action action">
+        <fieldset className="container__action action">
 					<InputSubmit  className="action__submit" label="Senden" />
 				</fieldset>
 

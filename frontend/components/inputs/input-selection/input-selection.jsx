@@ -1,17 +1,33 @@
 import { ChevronDown, ChevronUp } from "react-feather";
 import Paragraph from 'components/content/paragraph/paragraph';
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const InputSelection = ({ className, options, errors, id, label, validation, register, errorText, header, name, type }) => {
 
+		// SETUP STATE
     const [isOpen, setIsOpen] = useState(false);
 
+		// SETUP REFS
+		const inputSelectionRef = useRef();
+
+		// TOGGLE MENU		
     const toggleMenu = () => {
-        setIsOpen(!isOpen);
+      setIsOpen(!isOpen);
     };
 
+		// ADD EVENTLISTENER
+		useEffect(() => {
+			document.addEventListener('click', handleClickOutside);
+			return () => document.removeEventListener('click', handleClickOutside);
+		}, []);
+
+		// HANDLE CLICK OUTSIDE
+		const handleClickOutside = (event) => {
+			if (inputSelectionRef.current && !inputSelectionRef.current.contains(event.target)) setIsOpen(false);
+		};
+
    return (
-        <div className={`${ className } input-selection input-field`}>
+        <div className={`${ className } input-selection input-field`} ref={ inputSelectionRef }>
             <label className="input-selection__label input-field__label">{ label }</label>
             <div className="input-selection__header header" onClick={ toggleMenu }>
                 <Paragraph className="header__text">{ header }</Paragraph>
