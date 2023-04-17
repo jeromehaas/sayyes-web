@@ -40,7 +40,7 @@ const IntroAnimation = () => {
             // CHECK COOKIE TO SEE WHEN ANIMATION WAS RENDERED LAST
             const lastSeen = Cookies.get('intro-animation-last-seen');
             const now = Date.now();
-            const oneWeek = 24 * 7 * 60 * 60 * 1000;
+            const oneWeek = 24 * 60 * 60 * 1000;
             
             // IF NO COOKIE IS AVAILABLE OR IS SET LONGER THAN A WEEK AGO PLAY THE LONG ANIMATION
             if (!lastSeen || now - lastSeen > oneWeek) {

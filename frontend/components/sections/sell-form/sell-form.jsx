@@ -15,10 +15,20 @@ const SellForm = () => {
 	const { showNotifier } = useNotifierStore();
 
 	// BRING IN REACT-HOOK-FORM
-	const { register, handleSubmit, reset, formState } = useForm();
+	const { register, handleSubmit, reset, formState, watch, getValues } = useForm();
+	
+	// GET VALUES
+	const values = getValues();
+
+	// OBSERVE FILES
+	const observedValues = {
+		picture: watch(['picture'])
+	}
 
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
+
+
 
 		// APPEND DATA
 		const submission = new FormData();
@@ -56,7 +66,7 @@ const SellForm = () => {
 		<Section className="sell-form">
 			<form className="sell-form__container container" onSubmit={ handleSubmit((values) => handleDispatch(values))}>
 				<Heading className="container__heading">Kontakt</Heading>
-				<Picture  className="container__picture" src="/images/placeholder/placeholder.png" alt="Brautkleid" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
+				<Picture  className="container__picture" src="/images/general/general-04.webp" alt="Brautkleid" figure={{ form: "down", position: 'top-left', borderColor: 'grey' }}	 />
 				
 				<fieldset className="container__personal-data personal-data">
 					<Heading className="personal-data__heading" level="h3">Personalien</Heading>
@@ -75,10 +85,10 @@ const SellForm = () => {
 					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } readOnly />
+					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
 				</fieldset>
 
-                <fieldset className="container__action action">
+          <fieldset className="container__action action">
 					<InputSubmit  className="action__submit" label="Senden" />
 				</fieldset>
 

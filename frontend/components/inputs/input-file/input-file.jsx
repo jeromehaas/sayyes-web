@@ -1,7 +1,7 @@
 import Paragraph from "components//content/paragraph/paragraph";
-import { Paperclip } from "react-feather";
+import { Paperclip, Check } from "react-feather";
 
-const InputFile = ({ className, id, label, register, header = "test", defaultValue, validation, errors, errorText, filename }) => {
+const InputFile = ({ className, id, label, register, header = "test", errors, errorText, filename, value }) => {
 
 
 	return (
@@ -12,7 +12,12 @@ const InputFile = ({ className, id, label, register, header = "test", defaultVal
 							<div className="input-container__header header">
 									<Paragraph className="header__text">{ header }</Paragraph>
 							</div>	
-							<label className="input-container__action input-field__button" htmlFor="file"><Paperclip className="action__icon" /></label>
+							<label className="input-container__action input-field__button" htmlFor="file">
+								{ value 
+									? <Check className="action__icon" />
+									: <Paperclip className="action__icon" />
+								}
+							</label>
             </div>
             { errors && errors[id] && <p className="field__error">{ errorText }</p> }
         </div>

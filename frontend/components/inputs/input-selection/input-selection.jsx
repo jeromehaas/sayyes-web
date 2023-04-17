@@ -21,8 +21,9 @@ const InputSelection = ({ className, options, errors, id, label, validation, reg
                 { options.map((option) => (
                     <div className="menu__item item" key={ option.id }>
                         <input className="item__input" name={ name } id={ option.id } { ...register(id, validation)} value={ option.value } type={ type } />
-                        <label className="item__label" htmlFor={ option.id }>{ option.label }</label>
-                        <Paragraph className="item__info">{ option.info }</Paragraph>
+                        <label className="item__label" htmlFor={ option.id }>{ option.label }
+                        	<Paragraph className="item__info">{ option.info }</Paragraph>
+												</label>
                     </div>
                 ))}
             </div>
