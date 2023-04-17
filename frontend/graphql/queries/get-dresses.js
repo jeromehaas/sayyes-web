@@ -3,7 +3,7 @@ import { gql } from '@apollo/client';
 export const GET_DRESSES = () => {
 	return gql`
         query {
-            dresses {
+            dresses (sort: "createdAt:desc", pagination: { limit: 100 }){
                 data {
                     id
                     attributes {
