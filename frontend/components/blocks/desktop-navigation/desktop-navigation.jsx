@@ -32,7 +32,7 @@ const DesktopNavigation = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, [])
+	}, []);
 
 	return (
 		<nav className="desktop-navigation" ref={ desktopNavigationRef }>

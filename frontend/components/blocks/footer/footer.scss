@@ -2,9 +2,8 @@
 	background-color: $grey-20;
 
 	&__inner {
-		max-width: 1440px;
+		// max-width: 1440px;
 		margin: 0 auto;
-		padding: 0 32px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-areas: 
@@ -13,7 +12,9 @@
 
 	&__box, .box {
 		border-right: 1px solid $blue-100;
-		padding: 16px 32px;
+		// margin: 16px 32px;
+		margin: 32px 0;
+		padding: 64px;
 
 		&__contact { grid-area: contact; }
 		&__appointment { grid-area: appointment; }
@@ -43,11 +44,11 @@
 
 			&__text {
 				text-align: center;
-        		font-family: "Beausite-Slick", Arial, sans-serif;
+        font-family: "Beausite-Slick", Arial, sans-serif;
 			}
 
 			&__image {
-				margin: 16px auto 0 auto;
+				margin: 8px auto 0 auto;
 				object-fit: contain;
 				width: auto;
 				height: 40px;
@@ -61,7 +62,7 @@
 
 	}
 
-	@media (max-width: 1000px) {
+	@media (max-width: 1400px) {
 
 		&__box, .box {
 
@@ -77,7 +78,16 @@
 
 	}
 
-	@media (max-width: 750px) {
+	@media (max-width: 900px) {
+
+		&__box, .box {
+			margin: 32px 0;
+			padding: 32px;
+		}
+
+	}
+
+	@media (max-width: 800px) {
 
 		&__inner {
 			grid-template-columns: auto;
@@ -91,6 +101,7 @@
 		&__box, .box {
 			border-right: 0;
 			border-bottom: 1px solid $blue-100;
+			margin: 0 32px;
 			padding: 32px;
 
 			&__button-container {
