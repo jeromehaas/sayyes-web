@@ -12,10 +12,11 @@
 		background-color: $white-100;
 		z-index: 50;
 		transition: all 0.5s ease;
-		height: 144px;
+		height: 200px;
 		
 		&__logo {
 			height: 40px;
+			margin-top: 40px;
 			margin-bottom: 40px;
 			transition: all 0.5s ease;
 		}
@@ -38,25 +39,7 @@
 	}
 
 	&__placeholder {
-		height: 144px;
-	}
-
-	&--small {
-
-		&__bar, .bar {
-			height: 112px;
-
-			&__logo, .logo {
-				margin-bottom: 24px;
-				height: 24px !important;
-			}
-
-		}
-
-		&__placeholder {
-			height: 102px;
-		}
-
+		height: 200px;
 	}
 
 	@media (max-width: 800px) {
