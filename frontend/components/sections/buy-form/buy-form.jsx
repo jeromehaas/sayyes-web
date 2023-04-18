@@ -71,7 +71,7 @@ const BuyForm = () => {
 					<InputText className="personal-data__input personal-data__input--lastname" id="lastname" label="Nachname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--street" id="street" label="Strasse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--town" id="town" label="PLZ, Ort" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(value)}} pattern={{ pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefonnummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 				</fieldset>
 				
