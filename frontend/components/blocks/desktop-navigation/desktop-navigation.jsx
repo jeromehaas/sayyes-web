@@ -13,7 +13,7 @@ const DesktopNavigation = () => {
 
 	// HANDLE SCROLL
 	const handleScroll = () => {
-		if (window.scrollY > 10) {
+		if (window.scrollY > 20 ) {
 			gsap.context(() => {
 				gsap.to('.desktop-navigation .desktop-navigation__bar', { height: '120px', duration: 0.05, ease: 'power4.inOut' })	
 				gsap.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px', duration: 0.05, ease: 'power4.inOut' })	

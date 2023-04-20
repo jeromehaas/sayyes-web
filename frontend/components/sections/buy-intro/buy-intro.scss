@@ -14,11 +14,13 @@
 	&__heading {
 		margin-bottom: 32px;
 		grid-area: heading;
+		margin-right: 32px;
 	}
 
 	&__picture {
 		grid-area: picture;
 		margin-bottom: 32px;
+		margin-left: -32px;
 	}
 
 	&__text, .text {
@@ -63,7 +65,8 @@
 		}
 
 		&__heading {
-			text-align: left;;
+			text-align: left;
+			margin-right: 0;
 		}
 
 		&__heading {

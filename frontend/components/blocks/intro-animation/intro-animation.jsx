@@ -14,7 +14,7 @@ const IntroAnimation = () => {
     useEffect(() => {
         const context = gsap.context(() => {
             longIntroAnimationTimelineRef.current = gsap.timeline({ paused: true });
-            longIntroAnimationTimelineRef.current.to('.intro-animation .title__letter', { top: 0, opacity: 1, stagger: 0.2 }, 0.5);
+            longIntroAnimationTimelineRef.current.to('.intro-animation .title__letter', { top: 0, opacity: 1, stagger: 0.1, ease: "back.out" }, 0.5);
             longIntroAnimationTimelineRef.current.to('.intro-animation .content__subtitle', { opacity: 1 }, 2);
             longIntroAnimationTimelineRef.current.to('.intro-animation .title', { opacity: 0 }, 4);
             longIntroAnimationTimelineRef.current.to('.intro-animation .content__subtitle', { opacity: 0 }, 4.25);
