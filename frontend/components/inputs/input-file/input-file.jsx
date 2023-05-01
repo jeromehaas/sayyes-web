@@ -3,7 +3,6 @@ import { Paperclip, Check } from "react-feather";
 
 const InputFile = ({ className, id, label, register, header = "test", errors, errorText, filename, value }) => {
 
-
 	return (
 				<div className={`${ className } input-file input-field`}>
             <label className="input-file__label input-field__label">{ label }</label>

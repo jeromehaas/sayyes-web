@@ -2,17 +2,20 @@ import Section from "components//layouts/section/section";
 import Heading from "components//content/heading/heading";
 import Picture from "components//content/picture/picture";
 import Paragraph from "components//content/paragraph/paragraph";
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Image from "next/image";
 
 const Gallery = ({ data }) => {
+
+		// SETUP REFS
+		const sliderRef = useRef();
 
 		// SETUP STATE
 		const [ sliderIsVisible, setSliderIsVisible ] = useState(false);
 		const [ categoryIndex, setCategoryIndex ] = useState(0);
 		const [ imageIndex, setImageIndex ] = useState(0);
-		const [touchStart, setTouchStart] = useState(0);
-		const [touchEnd, setTouchEnd] = useState(0);
+		const [ touchStart, setTouchStart ] = useState(0);
+		const [ touchEnd, setTouchEnd ] = useState(0);
 
 		// HANDLE NEXT
     const handleNext = () => {
@@ -59,6 +62,17 @@ const Gallery = ({ data }) => {
 		setTouchEnd(e.targetTouches[0].clientX);
 	};
 
+	// ADD EVENTLISTENER
+	useEffect(() => {
+		document.addEventListener('click', handleClickOutside);
+		return () => document.removeEventListener('click', handleClickOutside);
+	}, []);
+
+	// HANDLE CLICK OUTSIDE
+	const handleClickOutside = (event) => {
+		if (event.target.classList.contains('slider__content') || event.target.classList.contains('slider__header')) setSliderIsVisible(false);
+	};
+
 	// HANDLE TOUCH END
 	const handleTouchEnd = () => {
 			if (!touchStart || !touchEnd) return;
@@ -92,7 +106,7 @@ const Gallery = ({ data }) => {
                 ))}
             </div>
             { sliderIsVisible && (
-                <div className="gallery__slider slider" onTouchStart={ handleTouchStart } onTouchMove={ handleTouchMove } onTouchEnd={ handleTouchEnd }>
+                <div className="gallery__slider slider" onTouchStart={ handleTouchStart } onTouchMove={ handleTouchMove } onTouchEnd={ handleTouchEnd } ref={ sliderRef }>
                     <div className="slider__header header">
                         <Heading className="header__heading" level="h4">{ data[categoryIndex].attributes.name }</Heading>
                         <button className="header__back back" onClick={ handleClose }>

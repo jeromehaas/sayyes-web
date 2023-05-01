@@ -19,7 +19,7 @@ const DesktopNavigation = () => {
 	// SETUP TIMELINE
 	useEffect(() => {
 		const context = gsap.context(() => {
-			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, transition: 'none', duration: 0.5, transition: 'power4.inOut' });
+			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, transition: 'none', duration: 0.25, transition: 'power4.inOut' });
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__bar', { height: '120px'  }, 0)	
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px' }, 0)	
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .bar__logo', { height: '24px', margin: '16px 0' }, 0)	
