@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useLayoutEffect } from "react";
 import { useRouter } from "next/router";
 import { gsap } from "gsap";
 
@@ -10,22 +10,43 @@ const DesktopNavigation = () => {
 
 	// SETUP REFS
 	const desktopNavigationRef = useRef();
+	const desktopNavigationTimelineRef = useRef();
+
+	// SETUP STATE
+	const [scrollPosition, setScrollPosition] = useState(0);
+	const [isAnimating, setIsAnimating] = useState(false);
+	const [isTouched, setIsTouched] = useState(false);
+
+	// SETUP TIMELINE
+	useEffect(() => {
+		const context = gsap.context(() => {
+			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, transition: 'none', duration: 0.5, transition: 'power4.inOut' });
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__bar', { height: '120px'  }, 0)	
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px' }, 0)	
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .bar__logo', { height: '24px', margin: '16px 0' }, 0)	
+		}, desktopNavigationRef);
+		return () => context.revert();
+	}, []);
+
+	// UPDATE STLYLE 
+	useEffect(() => {
+		if (isAnimating) return;
+		if (!isTouched) return;
+		if (scrollPosition > 20) {
+			desktopNavigationTimelineRef.current.play();
+		} else {
+			desktopNavigationTimelineRef.current.reverse();
+		}
+	}, [scrollPosition])
+
+	// FLAG FOR FIRST RENDER
+	useEffect(() => {
+		setIsTouched(true);
+	}, [])
 
 	// HANDLE SCROLL
 	const handleScroll = () => {
-		if (window.scrollY > 20 ) {
-			gsap.context(() => {
-				gsap.to('.desktop-navigation .desktop-navigation__bar', { height: '120px', duration: 0.05, ease: 'power4.inOut' })	
-				gsap.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px', duration: 0.05, ease: 'power4.inOut' })	
-				gsap.to('.desktop-navigation .bar__logo', { marginTop: '0px', marginBottom: '24px', height: '24px', duration: 0.05, ease: 'power4.inOut'})	
-			}, desktopNavigationRef);
-		} else {
-			gsap.context(() => {
-				gsap.to('.desktop-navigation .desktop-navigation__bar', { height: '200px', duration: 0.05, ease: 'power4.inOut' })	
-				gsap.to('.desktop-navigation .desktop-navigation__placeholder', { height: '200px', duration: 0.05, ease: 'power4.inOut' })	
-				gsap.to('.desktop-navigation .bar__logo', { marginTop: '40px', marginBottom: '40px', height: '40px', duration: 0.05, ease: 'power4.inOut'})	
-			}, desktopNavigationRef);
-		}
+		setScrollPosition(window.scrollY);
 	};
 
 	// ADD EVENTLISTENER ON FIRST RENDER
