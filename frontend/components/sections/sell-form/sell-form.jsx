@@ -26,9 +26,15 @@ const SellForm = () => {
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
 
-		// APPEND DATA
+		// INITIALIZE FORM DATA
 		const submission = new FormData();
-		submission.append('files.picture', values['picture'][0]);
+
+		// APPEND FILES
+		for (let i = 0; i < values['picture'].length; i++) {
+			submission.append('files.picture', values['picture'][i]);
+		};
+
+		// APPEND DATA
 		submission.append('data', JSON.stringify({
 			firstname: values['firstname'],
 			lastname: values['lastname'],
@@ -79,8 +85,8 @@ const SellForm = () => {
 					<InputText className="dress__input dress__input--brand" id="brand" label="Marke" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
 					<InputText className="dress__input dress__input--buy-date" id="buy-date" label="Kaufdatum" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
 					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
 				</fieldset>
 

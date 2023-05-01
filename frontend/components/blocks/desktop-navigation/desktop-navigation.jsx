@@ -15,7 +15,6 @@ const DesktopNavigation = () => {
 	// SETUP STATE
 	const [scrollPosition, setScrollPosition] = useState(0);
 	const [isAnimating, setIsAnimating] = useState(false);
-	const [isTouched, setIsTouched] = useState(false);
 
 	// SETUP TIMELINE
 	useEffect(() => {
@@ -31,18 +30,9 @@ const DesktopNavigation = () => {
 	// UPDATE STLYLE 
 	useEffect(() => {
 		if (isAnimating) return;
-		if (!isTouched) return;
-		if (scrollPosition > 20) {
-			desktopNavigationTimelineRef.current.play();
-		} else {
-			desktopNavigationTimelineRef.current.reverse();
-		}
+		if (scrollPosition > 20) { desktopNavigationTimelineRef.current.play() } 
+		if (scrollPosition <= 20) { desktopNavigationTimelineRef.current.reverse() }
 	}, [scrollPosition])
-
-	// FLAG FOR FIRST RENDER
-	useEffect(() => {
-		setIsTouched(true);
-	}, [])
 
 	// HANDLE SCROLL
 	const handleScroll = () => {

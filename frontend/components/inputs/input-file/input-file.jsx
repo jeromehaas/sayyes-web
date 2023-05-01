@@ -7,7 +7,7 @@ const InputFile = ({ className, id, label, register, header = "test", errors, er
 	return (
 				<div className={`${ className } input-file input-field`}>
             <label className="input-file__label input-field__label">{ label }</label>
-            <input className="input-file__fake-input input-field__fake-input" type="file" id="file" name="file" filename={ filename } { ...register(id) } readOnly />
+            <input className="input-file__fake-input input-field__fake-input" type="file" id="file" name="file" filename={ filename } { ...register(id) } multiple="multiple" readOnly />
             <div className="input-file__input-container input-field__input-container input-container">
 							<div className="input-container__header header">
 									<Paragraph className="header__text">{ header }</Paragraph>

@@ -26,9 +26,15 @@ const BuyForm = () => {
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
 
-		// APPEND DATA
+		// INIITIALIZE FORM DATA
 		const submission = new FormData();
-		submission.append('files.picture', values['picture'][0]);
+
+		// APPEND FILES
+		for (let i = 0; i < values['picture'].length; i++) {
+			submission.append('files.picture', values['picture'][i]);
+		};
+
+		// APPEND DATA
 		submission.append('data', JSON.stringify({
 			firstname: values['firstname'],
 			lastname: values['lastname'],
@@ -47,7 +53,7 @@ const BuyForm = () => {
 		// DISPATCH FORM SUBMISSION
 		const response = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/appointment-requests`, submission);
 
-		// HANDLE SUCCESS CASE
+		// // HANDLE SUCCESS CASE
 		if (response.status === 200) {
 			showNotifier({ message: 'Die Nachricht wurde erfolgreich übermittelt', type: 'success', isVisible: 'true' });
 			reset();
@@ -79,7 +85,7 @@ const BuyForm = () => {
 					<Heading className="dress__heading" level="h3">Dein Traumkleid</Heading>
 					<InputText className="dress__input dress__input--size" label="Deine Kleidergrösse" id="size" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
 					<InputText className="dress__input dress__input--wedding-date" label="Hochzeitsdatum" id="wedding-date" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
-					<InputText className="dress__input dress__input--budget" label="Dein Budget" id="budget" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
+					<InputText className="dress__input dress__input--budget" label="Dein Budget" id="budget" type="number" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
 					<InputText className="dress__input dress__input--selection" label="Kleider aus unserer Kollektion die dir gefallen" id="selection" register={ register } errors={ formState.errors }  validation={{ validate: (value) => value !== ""  }} errorText="Dieses Fled ist erforderlich" />
 				</fieldset>
 
