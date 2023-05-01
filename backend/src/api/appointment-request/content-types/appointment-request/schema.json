@@ -4,7 +4,8 @@
   "info": {
     "singularName": "appointment-request",
     "pluralName": "appointment-requests",
-    "displayName": "Appointment Request"
+    "displayName": "Buy Request",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -59,11 +60,12 @@
       "required": true
     },
     "picture": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     }
   }
 }
