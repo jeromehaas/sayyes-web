@@ -70,7 +70,7 @@ const Gallery = ({ data }) => {
 
 	// HANDLE CLICK OUTSIDE
 	const handleClickOutside = (event) => {
-		if (event.target.classList.contains('slider__content') || event.target.classList.contains('slider__header') || event.target.classList.contains('content__container')) setSliderIsVisible(false);
+		if (event.target.classList.contains('slider__content') || event.target.classList.contains('slider__header') || event.target.classList.contains('content__container') ) setSliderIsVisible(false);
 	};
 
 	// HANDLE TOUCH END
@@ -108,7 +108,7 @@ const Gallery = ({ data }) => {
             { sliderIsVisible && (
                 <div className="gallery__slider slider" onTouchStart={ handleTouchStart } onTouchMove={ handleTouchMove } onTouchEnd={ handleTouchEnd } ref={ sliderRef }>
                     <div className="slider__header header">
-                        <Heading className="header__heading" level="h4">{ data[categoryIndex].attributes.name }</Heading>
+                        <Heading className="header__heading" level="h2">{ data[categoryIndex].attributes.name }</Heading>
                         <button className="header__back back" onClick={ handleClose }>
                             <Image className="back__icon" src="/icons/slider/icon-close.svg" alt="Arrow" width={ 24 } height={ 24 } />
                         </button>      

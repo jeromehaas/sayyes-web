@@ -1,8 +1,10 @@
-import { ChevronDown, ChevronUp } from "react-feather";
+import { ChevronDown, ChevronUp, Check } from "react-feather";
 import Paragraph from 'components/content/paragraph/paragraph';
 import { useEffect, useState, useRef } from "react";
 
-const InputSelection = ({ className, options, errors, id, label, validation, register, errorText, header, name, type }) => {
+const InputSelection = ({ className, options, errors, id, label, validation, register, errorText, header, name, type, value }) => {
+
+	console.log(value);
 
 		// SETUP STATE
     const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +33,12 @@ const InputSelection = ({ className, options, errors, id, label, validation, reg
             <label className="input-selection__label input-field__label">{ label }</label>
             <div className="input-selection__header header" onClick={ toggleMenu }>
                 <Paragraph className="header__text">{ header }</Paragraph>
-                { isOpen ? <ChevronUp className="header__icon" /> : <ChevronDown className="header__icon" />  }
+                { value?.length 
+									? <Check className="header__icon" />
+									: isOpen 
+										? <ChevronUp className="header__icon" /> 
+										: <ChevronDown className="header__icon" />  
+								}
             </div>
             <div className={`input-selection__menu menu ${ isOpen ? 'menu--visible' : 'menu--invisible'}`}>
                 { options.map((option) => (

@@ -52,7 +52,7 @@ const Footer = () => {
 					</div>
 					<div className="box__item item">
 						<Link className="item__link" href="https://www.instagram.com/sayyes_bridal/" target="_blank">
-							<Image className="item__image" src="/icons/social-media/instagram.svg" width={ 40 } height={ 44 } alt="Instagram"  />
+							<Image className="item__image" src="/icons/social-media/instagram.svg" width={ 40 } height={ 40 } alt="Instagram"  />
 						</Link>	
 					</div>
 				</div>
