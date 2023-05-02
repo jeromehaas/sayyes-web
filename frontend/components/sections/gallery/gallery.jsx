@@ -70,7 +70,7 @@ const Gallery = ({ data }) => {
 
 	// HANDLE CLICK OUTSIDE
 	const handleClickOutside = (event) => {
-		if (event.target.classList.contains('slider__content') || event.target.classList.contains('slider__header')) setSliderIsVisible(false);
+		if (event.target.classList.contains('slider__content') || event.target.classList.contains('slider__header') || event.target.classList.contains('content__container')) setSliderIsVisible(false);
 	};
 
 	// HANDLE TOUCH END

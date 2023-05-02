@@ -72,21 +72,21 @@ const SellForm = () => {
 				
 				<fieldset className="container__personal-data personal-data">
 					<Heading className="personal-data__heading" level="h3">Personalien</Heading>
-					<InputText className="personal-data__input personal-data__input--firstname" id="firstname" label="Vorname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
-					<InputText className="personal-data__input personal-data__input--lastname" id="lastname" label="Nachname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--street" id="street" label="Strasse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--town" id="town" label="PLZ, Ort" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(value)}} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefonnummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="personal-data__input personal-data__input--firstname" id="firstname" label="Vorname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe deinen Vornamen an"  />
+					<InputText className="personal-data__input personal-data__input--lastname" id="lastname" label="Nachname" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe deinen Nachnamen an" />
+					<InputText className="personal-data__input personal-data__input--street" id="street" label="Strasse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe deine Strasse an" />
+					<InputText className="personal-data__input personal-data__input--town" id="town" label="PLZ, Ort" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe deine Adresse an" />
+					<InputText className="personal-data__input personal-data__input--email" id="email" label="E-Mail" register={ register } validation={{ validate: (value) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i.test(value)}} errors={ formState.errors } errorText="Bitte gebe deine E-Mail Adresse an" />
+					<InputText className="personal-data__input personal-data__input--phone" id="phone" label="Telefonnummer" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe deine Telefonnummer an" />
 				</fieldset>
 				
 				<fieldset className="container__dress dress">
 					<Heading className="dress__heading" level="h3">Zum Kleid</Heading>
-					<InputText className="dress__input dress__input--brand" id="brand" label="Marke" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich"  />
-					<InputText className="dress__input dress__input--buy-date" id="buy-date" label="Kaufdatum" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
-					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Dieses Feld ist erforderlich" />
+					<InputText className="dress__input dress__input--brand" id="brand" label="Marke" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe die Marke des Kleides an"  />
+					<InputText className="dress__input dress__input--buy-date" id="buy-date" label="Kaufdatum" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe das Kaufdatum des Kleides an" />
+					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe die Grösse des Kleides an" />
+					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe den Original-Preis des Kleides an" />
+					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe den gewünschten Verkaufspreis des Kleides an" />
 					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
 				</fieldset>
 
