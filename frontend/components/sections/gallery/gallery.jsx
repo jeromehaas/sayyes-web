@@ -116,7 +116,7 @@ const Gallery = ({ data }) => {
                     <div className="slider__content"> 
                         <img className="content__navigation navigation--left" src="/icons/slider/icon-caret-left.svg" alt="Caret" onClick={ handlePrevious} />
                         <div className="content__container">
-                            <Image className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex]?.attributes.formats.large.url } width={ 1800 } height={ 1200 } alt="Brautkleid" />
+                            <Image className="content__image" src={data[categoryIndex].attributes.images.data[imageIndex]?.attributes.formats.large.url } width={ 2500 } height={ 1600 } quality={ 100 } alt="Brautkleid" />
                         </div>
                         <img className="content__navigation navigation--right" src="/icons/slider/icon-caret-right.svg" alt="Caret" onClick={ handleNext } />
                     </div>
