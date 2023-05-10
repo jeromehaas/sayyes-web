@@ -97,7 +97,7 @@ const BuyForm = () => {
 
 				<fieldset className="container__upload upload">
 					<Heading className="upload__heading" level="h3">Dein Foto</Heading>
-					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
+					<InputFile className="upload__input upload__input--picture" label="Damit wir uns eine Vorstellung von deinem Typ machen können, kannst du hier ein Foto von dir hochladen (optional)" header="Foto hochladen" id="picture" register={ register } errors={ formState.errors } validation={{ validate: (value) => value.length <= 5 }} errorText="Bitte wähle maximal 5 Bilder aus" value={ values['picture'] } readOnly />
 				</fieldset> 
 
 				<fieldset className="container__action action">

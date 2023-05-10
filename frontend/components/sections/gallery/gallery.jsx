@@ -93,7 +93,7 @@ const Gallery = ({ data }) => {
         <Section className="gallery">
             <Heading className="gallery__heading">Unsere Kollektion</Heading>
             <div className="gallery__text text">
-                <Paragraph className="text__item">Bei der Auswahl unserer Brautkleider legen wir viel Wert auf hohe Qualität. Die Einzigartigkeit eines jeden Kleides steht dabei im Vordergrund. Von modernen und schlichten Ausführungen, über romantische Prinzessinen-Kleider bis hin zu extravaganten Couture-Modellen haben wir für jeden Geschmack etwas dabei. Unsere Kleider variieren in Grösse (34-42) und in Preis (300.- bis 5000.-).</Paragraph>
+                <Paragraph className="text__item">Bei der Auswahl unserer Brautkleider legen wir viel Wert auf hohe Qualität. Die Einzigartigkeit eines jeden Kleides steht dabei im Vordergrund. Von modernen und schlichten Ausführungen, über romantische Prinzessinen-Kleider bis hin zu extravaganten Couture-Modellen haben wir für jeden Geschmack etwas dabei. Unsere Kleider variieren in Grösse (34-42) und in Preis (300.- bis 6000.-).</Paragraph>
                 <Paragraph className="text__item">Untenstehend findest du eine kleine Auswahl unseres Sortiments.</Paragraph>
                 <Paragraph className="text__item">Folge SayYes auf Instagram, damit du stets über die neusten Zugänge informiert bist.</Paragraph>
             </div>

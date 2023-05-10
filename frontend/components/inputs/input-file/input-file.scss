@@ -13,6 +13,7 @@
 			&__header, .header {
 				background-color: $grey-60;
 				border-radius: 4px;
+				min-width: 240px;
 
 				&__text {
 					padding: 4px 8px;
@@ -45,6 +46,11 @@
 
 	&__fake-input {
 			display: none;
+	}
+
+	&__error {
+        margin-top: 4px;
+        color: $red-100;
 	}
 
 }

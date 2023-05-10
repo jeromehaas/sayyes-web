@@ -87,7 +87,7 @@ const SellForm = () => {
 					<InputText className="dress__input dress__input--size" id="size" label="Grösse" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe die Grösse des Kleides an" />
 					<InputText className="dress__input dress__input--original-price" id="original-price" label="Originalpreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe den Original-Preis des Kleides an" />
 					<InputText className="dress__input dress__input--sell-price" id="sell-price" label="Gewünschter Verkauspreis" type="number" register={ register } validation={{ validate: (value) => value !== "" }} errors={ formState.errors } errorText="Bitte gebe den gewünschten Verkaufspreis des Kleides an" />
-					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" register={ register } value={ values['picture'] && values['picture'][0]?.name } readOnly />
+					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" errors={ formState.errors } errorText="Bitte wähle maximal 5 Bilder aus" register={ register } value={ values['picture'] } validation={{ validate: (value) => value.length <= 5 }} readOnly />
 				</fieldset>
 
         <fieldset className="container__action action">

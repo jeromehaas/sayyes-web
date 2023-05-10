@@ -4,8 +4,6 @@ import { useEffect, useState, useRef } from "react";
 
 const InputSelection = ({ className, options, errors, id, label, validation, register, errorText, header, name, type, value }) => {
 
-	console.log(value);
-
 		// SETUP STATE
     const [isOpen, setIsOpen] = useState(false);
 
