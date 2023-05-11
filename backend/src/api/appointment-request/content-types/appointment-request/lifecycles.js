@@ -4,7 +4,7 @@ module.exports = {
     async afterCreate() {
 
         // DISPATCH MESSAGE
-        // strapi.service('api::email.email').newAppointmentRequest();
+        strapi.service('api::email.email').newAppointmentRequest();
 
     },
 
