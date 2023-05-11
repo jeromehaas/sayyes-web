@@ -7,6 +7,7 @@ const Head = ({ meta }) => {
      <NextHead>
         <title>{`${ meta.title } | SayYes`}</title>
         <meta name="description" content={ meta.description || "" } />
+				<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <meta property="og:title" content={ meta.title } />
         <meta property="og:description" content={ meta.description } />
