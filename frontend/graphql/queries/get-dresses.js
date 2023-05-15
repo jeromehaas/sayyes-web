@@ -13,6 +13,7 @@ export const GET_DRESSES = () => {
                                 attributes {
                                     formats
                                     alternativeText
+																		url
                                 }
                             }
                         }
@@ -21,6 +22,7 @@ export const GET_DRESSES = () => {
                                 attributes {
                                     formats
                                     alternativeText
+																		url
                                 }
                             }
                         }
