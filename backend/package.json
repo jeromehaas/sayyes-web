@@ -17,7 +17,12 @@
     "@strapi/strapi": "4.8.2",
     "better-sqlite3": "8.0.1",
     "pg": "^8.10.0",
-    "strapi-provider-upload-do": "^3.6.8"
+    "strapi-provider-upload-do": "^3.6.8",
+		"prettier": "^2.8.8",
+		"eslint": "^8.40.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.27.5"
   },
   "author": {
     "name": "A Strapi developer"

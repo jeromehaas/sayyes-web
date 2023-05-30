@@ -1,11 +1,9 @@
 module.exports = {
 
-    // RENDERS EVERY TIME AFTER A NEW DRESS REWUEST SUBMIT
-    async afterCreate() {
+	async afterCreate() {
 
-        // DISPATCH MESSAGE
-        strapi.service('api::email.email').newAppointmentRequest();
+		strapi.service('api::email.email').newAppointmentRequest();
 
-    },
+	},
 
 };
