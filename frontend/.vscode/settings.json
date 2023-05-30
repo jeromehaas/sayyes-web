@@ -35,7 +35,7 @@
 	},
 
 	//WORKBENCH
-	"workbench.colorTheme": "One Dark Pro Darker",
+	"workbench.colorTheme": "Nord",
 
 	// VIM
 	"vim.vimrc.enable": true,

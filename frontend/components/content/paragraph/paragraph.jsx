@@ -1,8 +1,8 @@
 const Paragraph = ({ className, children }) => {
 
-    return (
-        <p className={`${ className } paragraph`}>{ children }</p>
-    );
+	return (
+		<p className={ `${ className } paragraph` }>{ children }</p>
+	);
 
 };
 

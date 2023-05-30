@@ -1,33 +1,33 @@
 .input-text {
-    margin-bottom: 16px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "field__label"
-        "field__input" 
-        "field__error";
+	margin-bottom: 16px;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"field__label"
+		"field__input" 
+		"field__error";
 
-    &__label { 
-        grid-area: field__label;
-				color: $grey-60;
-    }
+	&__label { 
+		grid-area: field__label;
+		color: $grey-60;
+	}
 
-    &__input {
-        grid-area: field__input;
-        border: none;
-        padding: 8px 8px 8px 0;
-        outline: none;
-        background-color: transparent;
-        color: $white-100;
-        border-bottom: 1px solid $grey-60;
-				border-radius: 0;
-    }
+	&__input {
+		grid-area: field__input;
+		border: none;
+		padding: 8px 8px 8px 0;
+		outline: none;
+		background-color: transparent;
+		color: $white-100;
+		border-bottom: 1px solid $grey-60;
+		border-radius: 0;
+	}
 
-    &__error {
-        grid-area: field__error;
-        color: $red-100;
-        margin-top: 4px;
-    }
+	&__error {
+		grid-area: field__error;
+		color: $red-100;
+		margin-top: 4px;
+	}
 
 }

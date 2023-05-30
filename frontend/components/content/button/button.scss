@@ -1,12 +1,10 @@
 .button {
-    background-color: $blue-100;
-    color: $white-100;
-    padding: 12px 16px;
-    border-radius: 4px;
-    color: $grey-60;
-    display: inline-block;
-    cursor: pointer;
-    text-align: center;
-    display: grid;
-    place-items: center;
+	background-color: $blue-100;
+	padding: 12px 16px;
+	border-radius: 4px;
+	color: $grey-60;
+	cursor: pointer;
+	text-align: center;
+	display: grid;
+	place-items: center;
 }

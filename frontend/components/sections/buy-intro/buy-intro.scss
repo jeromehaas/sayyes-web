@@ -4,8 +4,8 @@
 	&__inner {
 		display: grid;
 		grid-template-areas: 
-		"heading picture"
-		"text text";
+			"heading picture"
+			"text text";
 		align-items: end;
 		grid-template-columns: auto 320px;
 		grid-gap: 32px;
@@ -65,13 +65,10 @@
 		}
 
 		&__heading {
-			text-align: left;
-			margin-right: 0;
-		}
-
-		&__heading {
 			margin-bottom: 0;
 			grid-area: heading;
+			text-align: left;
+			margin-right: 0;
 		}
 
 		&__text, .text {
@@ -85,8 +82,3 @@
 	}
 
 }
-
-
-
-
-

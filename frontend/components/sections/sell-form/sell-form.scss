@@ -62,9 +62,9 @@
 			}
 
 			&__heading,
-            &__input--brand {
-                grid-column: span 2;
-            }
+			&__input--brand {
+				grid-column: span 2;
+			}
 
 		}
 
@@ -128,15 +128,15 @@
 
 			}
 
-            &__dress, .dress {
-                grid-template-columns: 1fr;
+			&__dress, .dress {
+				grid-template-columns: 1fr;
 
-                &__heading,
-                &__input--brand {
-                    grid-column: span 1;
-                }
+				&__heading,
+				&__input--brand {
+					grid-column: span 1;
+				}
 
-            }
+			}
 
 		}	
 

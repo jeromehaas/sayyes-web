@@ -1,46 +1,46 @@
 /* CONFIGS */
-@import 'styles/configs/reset.scss';
-@import 'styles/configs/scrollbar.scss';
-@import 'styles/configs/fonts.scss';
-@import 'styles/configs/variables.scss';
-@import 'styles/configs/typography.scss';
-@import 'styles/configs/global.scss';
-@import 'styles/configs/inputs.scss';
+@import "styles/configs/reset.scss";
+@import "styles/configs/scrollbar.scss";
+@import "styles/configs/fonts.scss";
+@import "styles/configs/variables.scss";
+@import "styles/configs/typography.scss";
+@import "styles/configs/global.scss";
+@import "styles/configs/inputs.scss";
 
 /* CONTENT */
-@import 'components/content/heading/heading.scss';
-@import 'components/content/paragraph/paragraph.scss';
-@import 'components/content/button/button.scss';
-@import 'components/content/picture/picture.scss';
+@import "components/content/heading/heading.scss";
+@import "components/content/paragraph/paragraph.scss";
+@import "components/content/button/button.scss";
+@import "components/content/picture/picture.scss";
 
 /* BLOCKS */
-@import 'components/blocks/desktop-navigation/desktop-navigation.scss';
-@import 'components/blocks/footer/footer.scss';
-@import 'components/blocks/mobile-navigation/mobile-navigation.scss';
-@import 'components/blocks/intro-animation/intro-animation.scss';
-@import 'components/blocks/notifier/notifier.scss';
+@import "components/blocks/desktop-navigation/desktop-navigation.scss";
+@import "components/blocks/footer/footer.scss";
+@import "components/blocks/mobile-navigation/mobile-navigation.scss";
+@import "components/blocks/intro-animation/intro-animation.scss";
+@import "components/blocks/notifier/notifier.scss";
 
 /* LAYOUTS */
-@import 'components/layouts/section/section.scss';
-@import 'components/layouts/page/page.scss';
-@import 'components/layouts/blank-page/blank-page.scss';
+@import "components/layouts/section/section.scss";
+@import "components/layouts/page/page.scss";
+@import "components/layouts/blank-page/blank-page.scss";
 
 /* INPUTS */
-@import 'components/inputs/input-text/input-text.scss';
-@import 'components/inputs/input-selection/input-selection.scss';
-@import 'components/inputs/input-file/input-file.scss';
-@import 'components/inputs/input-submit/input-submit.scss';
+@import "components/inputs/input-text/input-text.scss";
+@import "components/inputs/input-selection/input-selection.scss";
+@import "components/inputs/input-file/input-file.scss";
+@import "components/inputs/input-submit/input-submit.scss";
 
 /* SECTIONS */
-@import 'components/sections/hero/hero.scss';
-@import 'components/sections/buy-intro/buy-intro.scss';
-@import 'components/sections/buy-form/buy-form.scss';
-@import 'components/sections/sell-intro/sell-intro.scss';
-@import 'components/sections/sell-form/sell-form.scss';
-@import 'components/sections/about-intro/about-intro.scss';
-@import 'components/sections/gallery/gallery.scss';
-@import 'components/sections/faq-content/faq-content.scss';
-@import 'components/sections/data-privacy-content/data-privacy-content.scss';
-@import 'components/sections/imprint-content/imprint-content.scss';
-@import 'components/sections/error/error.scss';
-@import 'components/sections/login-form/login-form.scss';
+@import "components/sections/hero/hero.scss";
+@import "components/sections/buy-intro/buy-intro.scss";
+@import "components/sections/buy-form/buy-form.scss";
+@import "components/sections/sell-intro/sell-intro.scss";
+@import "components/sections/sell-form/sell-form.scss";
+@import "components/sections/about-intro/about-intro.scss";
+@import "components/sections/gallery/gallery.scss";
+@import "components/sections/faq-content/faq-content.scss";
+@import "components/sections/data-privacy-content/data-privacy-content.scss";
+@import "components/sections/imprint-content/imprint-content.scss";
+@import "components/sections/error/error.scss";
+@import "components/sections/login-form/login-form.scss";

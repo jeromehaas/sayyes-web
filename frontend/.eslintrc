@@ -46,6 +46,11 @@
 			"no-param-reassign": "off",
 			"template-curly-spacing": "off",
 			"quote-props": "off",
-			"import/prefer-default-export": "off"
+			"import/prefer-default-export": "off",
+			"no-nested-ternary": "off",
+			"react/no-unknown-property": "off",
+			"react/display-name": "off",
+			"no-plusplus": "off",
+			"jsx-a11y/no-noninteractive-element-interactions": "off",
   }
 }

@@ -26,7 +26,7 @@
 			}
 
 			&:nth-child(3) {
-				top: 0px;
+				top: 0;
 				left: calc(50% + 60px);
 				z-index: 20;
 			}
@@ -74,7 +74,7 @@
 				}
 	
 				&:nth-child(3) {
-					top: 0px;
+					top: 0;
 					left: calc(50% + 80px);
 					z-index: 20;
 				}
@@ -92,11 +92,10 @@
 	}
 
 	@media (max-width: 800px) {
-
 		margin-top: 40px;
 
-			&__teaser, .teaser {
-				height: 384px;
+		&__teaser, .teaser {
+			height: 384px;
 	
 			&__item {
 				position: absolute;
@@ -104,7 +103,7 @@
 				transform: translateX(-50%);
 	
 				&:nth-child(1) {
-					top: 0px;
+					top: 0;
 					left: calc(50% - 80px);
 					z-index: 20;
 				}
@@ -138,7 +137,7 @@
 				height: 280px;
 
 				&:nth-child(1) {
-					top: 0px;
+					top: 0;
 					left: calc(50% - 64px);
 					z-index: 20;
 				}
@@ -153,4 +152,4 @@
 		}
 	}
 		
-	}
+}

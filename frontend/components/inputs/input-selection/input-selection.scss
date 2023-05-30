@@ -1,90 +1,91 @@
 .input-selection {
 	position: relative;
 
-    &__label {
-        color: $grey-60;
-        margin-bottom: 16px;
-    }
+	&__label {
+		color: $grey-60;
+		margin-bottom: 16px;
+	}
 
-    &__header, .header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 4px 8px;
-        background-color: $grey-60;
-        border-radius: 4px;        
+	&__header, .header {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 4px 8px;
+		background-color: $grey-60;
+		border-radius: 4px;        
 		cursor: pointer;
 
-        &__text {
-            color: $blue-100;
-        }
+		&__text {
+			color: $blue-100;
+		}
 
-    }
+	}
 
-    &__menu, .menu {
-        background-color: $grey-60;
-        margin-top: 4px;
-        padding: 4px 8px;
+	&__menu, .menu {
+		background-color: $grey-60;
+		margin-top: 4px;
+		padding: 4px 8px;
 		position: absolute;
 		width: 100%;
-        border-radius: 4px;        
+		border-radius: 4px;        
 		border-bottom: 1px solid $blue-100;
-        z-index: 20;
+		z-index: 20;
 
-        &--visible {
-            display: block;
-        }
+		&--visible {
+			display: block;
+		}
 
-        &--invisible {
-            display: none;
-            visibility: hidden;
-        }
+		&--invisible {
+			display: none;
+			visibility: hidden;
+		}
 
-        &__item, .item {
-            display: grid;
-            grid-template-areas: 
-                "input label"
-                "input info";
-            grid-template-columns: 24px auto;
-            margin-bottom: 8px;
-						justify-content: start;
+		&__item, .item {
+			display: grid;
+			grid-template-areas: 
+				"input label"
+				"input info";
+			grid-template-columns: 24px auto;
+			margin-bottom: 8px;
+			justify-content: start;
             
-            &__input {
-                grid-area: input;
-                margin-top: 4px;
-                width: 16px;
-                height: 16px;
-                border: 2px solid $blue-100;
-                background-color: $grey-60;
-                -webkit-appearance: none;
+			&__input {
+				grid-area: input;
+				margin-top: 4px;
+				width: 16px;
+				height: 16px;
+				border: 2px solid $blue-100;
+				background-color: $grey-60;
+				-webkit-appearance: none;
+				appearance: none;
 				cursor: pointer;
 
-                &[type="radio"] {
-                    border-radius: 50%;
-                }
+				&[type="radio"] {
+					border-radius: 50%;
+				}
 
-                &:checked {
-                    background-color: $blue-100;
-                }
-            }
+				&:checked {
+					background-color: $blue-100;
+				}
+			}
 
-            &__label {
-                grid-area: label;
+			&__label {
+				grid-area: label;
 				cursor: pointer;
-            }
+			}
 
-            &__info {
-                grid-area: info;
-            }
+			&__info {
+				grid-area: info;
+			}
 
-        }
+		}
 
-    }
+	}
 
-    &__error {
-        margin-top: 4px;
-        color: $red-100;
-    }
+	&__error {
+		margin-top: 4px;
+		color: $red-100;
+	}
 
 }

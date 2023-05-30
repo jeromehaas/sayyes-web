@@ -1,4 +1,4 @@
-import Head from "components/blocks/head/head";
+import Head from 'components/blocks/head/head';
 
 const BlankPage = ({ children, meta }) => {
 
@@ -7,7 +7,7 @@ const BlankPage = ({ children, meta }) => {
 			<Head meta={ meta } />
 			{ children }
 		</div>
-	)
+	);
 
 };
 

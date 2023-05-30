@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { useEffect, useState, useRef, useLayoutEffect } from "react";
-import { useRouter } from "next/router";
-import { gsap } from "gsap";
+import Link from 'next/link';
+import { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { useRouter } from 'next/router';
+import { gsap } from 'gsap';
 
 const DesktopNavigation = () => {
 
@@ -14,25 +14,25 @@ const DesktopNavigation = () => {
 
 	// SETUP STATE
 	const [scrollPosition, setScrollPosition] = useState(0);
-	const [isAnimating, setIsAnimating] = useState(false);
+	const [isAnimating] = useState(false);
 
 	// SETUP TIMELINE
 	useEffect(() => {
 		const context = gsap.context(() => {
 			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, transition: 'none', duration: 0.25, transition: 'power4.inOut' });
-			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__bar', { height: '120px'  }, 0)	
-			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px' }, 0)	
-			desktopNavigationTimelineRef.current.to('.desktop-navigation .bar__logo', { height: '24px', margin: '16px 0' }, 0)	
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__bar', { height: '120px' }, 0);
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px' }, 0);
+			desktopNavigationTimelineRef.current.to('.desktop-navigation .bar__logo', { height: '24px', margin: '16px 0' }, 0);
 		}, desktopNavigationRef);
-		return () => context.revert();
+		return () => { return context.revert(); };
 	}, []);
 
-	// UPDATE STLYLE 
+	// UPDATE STLYLE
 	useEffect(() => {
 		if (isAnimating) return;
-		if (scrollPosition > 20) { desktopNavigationTimelineRef.current.play() } 
-		if (scrollPosition <= 20) { desktopNavigationTimelineRef.current.reverse() }
-	}, [scrollPosition])
+		if (scrollPosition > 20) { desktopNavigationTimelineRef.current.play(); }
+		if (scrollPosition <= 20) { desktopNavigationTimelineRef.current.reverse(); }
+	}, [scrollPosition]);
 
 	// HANDLE SCROLL
 	const handleScroll = () => {
@@ -42,22 +42,22 @@ const DesktopNavigation = () => {
 	// ADD EVENTLISTENER ON FIRST RENDER
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		return () => { return window.removeEventListener('scroll', handleScroll); };
 	}, []);
 
 	return (
 		<nav className="desktop-navigation" ref={ desktopNavigationRef }>
-				<div className="desktop-navigation__bar bar">
-				<Link className="bar__logo-link" href="/"><img className="bar__logo" src="/logos/logo-sayyes.svg" /></Link>
+			<div className="desktop-navigation__bar bar">
+				<Link className="bar__logo-link" href="/"><img className="bar__logo" src="/logos/logo-sayyes.svg" alt="SAYYES" /></Link>
 				<div className="bar__links">
-					<Link className={`links__item ${ router.pathname === '/' ? 'links__item--active' : '' }`} href="/">Home</Link>
-					<Link className={`links__item ${ router.pathname === '/buy' ? 'links__item--active' : '' }`} href="/buy">Kaufen</Link>
-					<Link className={`links__item ${ router.pathname === '/sell' ? 'links__item--active' : '' }`} href="/sell">Verkaufen</Link>
-					<Link className={`links__item ${ router.pathname === '/about' ? 'links__item--active' : '' }`} href="/about">About</Link>
-					<Link className={`links__item ${ router.pathname === '/collection' ? 'links__item--active' : '' }`} href="/collection">Kollektion</Link>
+					<Link className={ `links__item ${ router.pathname === '/' ? 'links__item--active' : '' }` } href="/">Home</Link>
+					<Link className={ `links__item ${ router.pathname === '/buy' ? 'links__item--active' : '' }` } href="/buy">Kaufen</Link>
+					<Link className={ `links__item ${ router.pathname === '/sell' ? 'links__item--active' : '' }` } href="/sell">Verkaufen</Link>
+					<Link className={ `links__item ${ router.pathname === '/about' ? 'links__item--active' : '' }` } href="/about">About</Link>
+					<Link className={ `links__item ${ router.pathname === '/collection' ? 'links__item--active' : '' }` } href="/collection">Kollektion</Link>
 				</div>
 			</div>
-			<div className="desktop-navigation__placeholder"></div>
+			<div className="desktop-navigation__placeholder" />
 		</nav>
 	);
 

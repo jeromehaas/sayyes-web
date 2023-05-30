@@ -1,24 +1,23 @@
 .login-form {
 	background-color: $blue-80;
 	background-size: cover;
-	position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
 	position: relative;
 	height: 100vh; 
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
 
 	&__wrapper {
 		background-color: $white-100;
 		padding: 48px;
 		border-radius: 20px;
-        max-width: 320px;
+		max-width: 320px;
 	}
 	
 	&__dial-wrapper {
@@ -29,13 +28,12 @@
 	}
 
 	&__logo {
-		margin-bottom: 24px;
-        margin: 0 auto 32px auto;
+		margin: 0 auto 32px;
 		text-align: center;
 		font-size: 24px;
-        display: block;
-        height: 24px;
-        width: auto;
+		display: block;
+		height: 24px;
+		width: auto;
 	}
 
 	&__dial-button, .dial-button {
@@ -51,23 +49,23 @@
 		justify-content: center;
 		align-items: center;
 
-        &__icon {
-            width: 16px;
-            height: 16px;
+		&__icon {
+			width: 16px;
+			height: 16px;
 
-            & > * {
-                color: $blue-80;
-            }
+			& > * {
+				color: $blue-80;
+			}
 
-        }
-
-		&:active {
-			 background-color: darken($white-100, 10%);
 		}
 
-        &:last-child {
-            justify-self: center;
-        }
+		&:active {
+			background-color: darken($white-100, 10%);
+		}
+
+		&:last-child {
+			justify-self: center;
+		}
 
 	}
 
@@ -86,7 +84,7 @@
 		border-radius: 50%;
 
 		&--active {
-		    background-color: $blue-80;
+			background-color: $blue-80;
 		}
 
 	}

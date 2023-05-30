@@ -14,9 +14,17 @@
 		margin: 32px 0;
 		padding: 64px;
 
-		&__contact { grid-area: contact; }
-		&__appointment { grid-area: appointment; }
-		&__about-us { grid-area: about-us; }
+		&__contact { 
+			grid-area: contact;
+		}
+
+		&__appointment { 
+			grid-area: appointment; 
+		}
+
+		&__about-us { 
+			grid-area: about-us; 
+		}
 
 		&__heading {
 			text-align: center;
@@ -42,11 +50,11 @@
 
 			&__text {
 				text-align: center;
-        font-family: "Beausite-Slick", Arial, sans-serif;
+				font-family: Beausite-Slick, Arial, sans-serif;
 			}
 
 			&__image {
-				margin: 8px auto 0 auto;
+				margin: 8px auto 0;
 				object-fit: contain;
 				width: 40px;
 				height: 48px;

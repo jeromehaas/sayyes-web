@@ -1,53 +1,52 @@
 .error {
-    background-image: url('/images/general/general-09.webp');
-    background-size: cover;
-    background-position: 20% 50%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;;
-    min-height: 100vh;
+	background-image: url('/images/general/general-09.webp');
+	background-size: cover;
+	background-position: 20% 50%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;;
+	min-height: 100vh;
 
-    &__inner {
-        height: 100%;
-        width: 100%;
-        flex-direction: column;
-        margin-top: 80px;
-        margin-bottom: 120px;
-    }
+	&__inner {
+		height: 100%;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 80px;
+		margin-bottom: 120px;
+	}
 
+	&__title, .title {
+		margin-bottom: 24px;
 
-    &__title, .title {
-        margin-bottom: 24px;
+		&__letter-wrapper {
+			overflow: hidden;
+			position: relative;
+			font-size: inherit;
+			display: inline-block;
+		}
 
-        &__letter-wrapper {
-            overflow: hidden;
-            position: relative;
-            font-size: inherit;
-            display: inline-block;
-        }
+		&__letter {
+			color: $white-100;
+			font-size: inherit;
+			position: relative;;
+			top: 2em;
+		}
 
-        &__letter {
-            color: $white-100;
-            font-size: inherit;
-            position: relative;;
-            top: 2em;
-        }
+	}
 
-    }
+	&__message, .message {
+		margin-bottom: 32px;
+		opacity: 0;
 
-    &__message, .message {
-        margin-bottom: 32px;
-        opacity: 0;
+		&__item {
+			color: $white-100;
+		}
 
-        &__item {
-            color: $white-100;
-        }
+	}
 
-    }
-
-    &__button {
-        display: inline-block;
-        opacity: 0;
-    }
+	&__button {
+		display: inline-block;
+		opacity: 0;
+	}
 
 }
