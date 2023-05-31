@@ -20,6 +20,10 @@
 			color: $blue-100;
 		}
 
+		&__icon {
+			pointer-events: none;
+		}
+
 	}
 
 	&__menu, .menu {
