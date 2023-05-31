@@ -193,7 +193,7 @@ module.exports = `
 										<td align="left" vertical-align="middle" style="font-size:0px;padding:10px 25px;word-break:break-word;">
 											<table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:separate;line-height:100%;">
 												<tr>
-													<td align="center" bgcolor="#171926" role="presentation" style="border:none;border-radius:3px;cursor:auto;padding:10px 25px;background:#171926;" valign="middle"><a href="http://localhost:1337/admin" style="background:#171926;color:#FFFFFF;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">zum Admin-Panel</a></td>
+													<td align="center" bgcolor="#171926" role="presentation" style="border:none;border-radius:3px;cursor:auto;padding:10px 25px;background:#171926;" valign="middle"><a href="https://cms.sayyes-bridal.ch/admin" style="background:#171926;color:#FFFFFF;font-family:Arial, sans-serif;font-size:13px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;" target="_blank">zum Admin-Panel</a></td>
 												</tr>
 											</table>
 										</td>
