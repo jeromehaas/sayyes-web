@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [V0.1.2] - 31.05.2023
+- setup cors configuration
+- fix image fallback in forms
+- fix pointer-events in selection-input
+- fix link in html email template
+
 ## [V0.1.1] - 31.05.2023
 - fix min and max zoom in head
 - fix webkit input styles
