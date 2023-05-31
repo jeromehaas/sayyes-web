@@ -24,13 +24,13 @@ const ProtectedRoutes = ({ children }) => {
 	const environment = process.env.NEXT_PUBLIC_ENVIRONMENT;
 
 	// CHECK IF TOKEN IS VALID
-	useEffect(() => {
-		const authToken = getCookie('auth-token');
-		const tokenIsValid = checkToken(authToken);
-		tokenIsValid
-			? setIsAuthenticated(true)
-			: router.push('/login');
-	}, [isAuthenticated]);
+	// useEffect(() => {
+	// 	const authToken = getCookie('auth-token');
+	// 	const tokenIsValid = checkToken(authToken);
+	// 	tokenIsValid
+	// 		? setIsAuthenticated(true)
+	// 		: router.push('/login');
+	// }, [isAuthenticated]);
 
 	// RETURN CHILDREN IF ENVIRONMENT IS PRODUCTION
 	if (environment === 'production') {
