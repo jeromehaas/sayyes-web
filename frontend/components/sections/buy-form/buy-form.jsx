@@ -24,7 +24,7 @@ const BuyForm = () => {
 	watch(['picture', 'weekday', 'package']);
 
 	// HANDLE DISPATCH
-	const handleDispatch = async () => {
+	const handleDispatch = async (values) => {
 
 		// INIITIALIZE FORM DATA
 		const submission = new FormData();
@@ -67,7 +67,7 @@ const BuyForm = () => {
 
 	return (
 		<Section className="buy-form">
-			<form className="buy-form__container container" onSubmit={ handleSubmit(() => { return handleDispatch(); }) }>
+			<form className="buy-form__container container" onSubmit={ handleSubmit((values) => { return handleDispatch(values); }) }>
 				<Heading className="container__heading">Kontakt</Heading>
 				<Picture className="container__picture" src="/images/general/general-03.webp" alt="Brautkleid" figure={ { form: 'down', position: 'top-left', borderColor: 'grey' } }	 />
 				<fieldset className="container__personal-data personal-data">

@@ -23,7 +23,7 @@ const SellForm = () => {
 	watch(['picture']);
 
 	// HANDLE DISPATCH
-	const handleDispatch = async () => {
+	const handleDispatch = async (values) => {
 
 		// INITIALIZE FORM DATA
 		const submission = new FormData();
@@ -65,7 +65,7 @@ const SellForm = () => {
 
 	return (
 		<Section className="sell-form">
-			<form className="sell-form__container container" onSubmit={ handleSubmit(() => { return handleDispatch(); }) }>
+			<form className="sell-form__container container" onSubmit={ handleSubmit((values) => { return handleDispatch(values); }) }>
 				<Heading className="container__heading">Kontakt</Heading>
 				<Picture className="container__picture" src="/images/general/general-04.webp" alt="Brautkleid" figure={ { form: 'down', position: 'top-left', borderColor: 'grey' } }	 />
 				<fieldset className="container__personal-data personal-data">
