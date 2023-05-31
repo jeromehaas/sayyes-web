@@ -30,7 +30,7 @@ const BuyForm = () => {
 		const submission = new FormData();
 
 		// APPEND FILES
-		for (let i = 0; i < values.picture.length; i++) {
+		for (let i = 0; i < values?.picture?.length; i++) {
 			submission.append('files.picture', values.picture[i]);
 		};
 
