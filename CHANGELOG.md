@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [V0.1.4] - 31.05.2023
+- remove login barrier
+
 ## [V0.1.3] - 31.05.2023
 - add plausible tracking script
 - fix form submission bug
