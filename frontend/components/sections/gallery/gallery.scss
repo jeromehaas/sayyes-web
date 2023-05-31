@@ -60,6 +60,7 @@
 					}
 
 				}
+
 			}
 
 			&:nth-child(8n + 4) {
@@ -245,6 +246,7 @@
 	}
 
 	@media (max-width: 950px) {
+
 		&__collection, .collection {
 			grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 		}

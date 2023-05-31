@@ -48,7 +48,6 @@ const DataPrivacyContent = () => {
 					<Heading className="item__heading" level="h4" />
 					<Paragraph className="item__text"> </Paragraph>
 				</div>
-
 			</div>
 		</Section>
 	);

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useEffect, useState, useRef, useLayoutEffect } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
 
@@ -19,7 +19,7 @@ const DesktopNavigation = () => {
 	// SETUP TIMELINE
 	useEffect(() => {
 		const context = gsap.context(() => {
-			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, transition: 'none', duration: 0.25, transition: 'power4.inOut' });
+			desktopNavigationTimelineRef.current = gsap.timeline({ paused: true, duration: 0.25, transition: 'power4.inOut' });
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__bar', { height: '120px' }, 0);
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .desktop-navigation__placeholder', { height: '120px' }, 0);
 			desktopNavigationTimelineRef.current.to('.desktop-navigation .bar__logo', { height: '24px', margin: '16px 0' }, 0);

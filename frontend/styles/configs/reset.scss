@@ -1,12 +1,12 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 button {
-    background-color: transparent;
-    border: none;
+	background-color: transparent;
+	border: none;
 }
 
 a {
@@ -15,9 +15,10 @@ a {
 }
 
 fieldset {
-    border: none;
+	border: none;
 }
 
 input {
-    -webkit-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
 }
