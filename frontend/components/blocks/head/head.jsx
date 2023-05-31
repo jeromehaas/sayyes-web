@@ -19,6 +19,7 @@ const Head = ({ meta }) => {
 			<meta property="og:type" content="image/png" />
 			<meta property="og:url" content="samirahaas.ch" />
 			<meta property="og:site_name" content={ meta.title } />
+			<script defer data-domain="sayyes-bridal.ch" src="https://plausible.io/js/script.js" />
 		</NextHead>
 	);
 
