@@ -38,12 +38,18 @@ const IntroAnimation = () => {
 	useEffect(() => {
 
 		// CHECK COOKIE TO SEE WHEN ANIMATION WAS RENDERED LAST
-		const lastSeen = Cookies.get('intro-animation-last-seen');
-		const now = Date.now();
-		const oneWeek = 24 * 60 * 60 * 1000;
+		const lastSeen = parseInt(Cookies.get('intro-animation-last-seen'), 10);
+		const now = parseInt(Date.now(), 10);
+		const oneDay = parseInt(24 * 60 * 60 * 1000, 10);
+
+		console.log('now', now);
+		console.log('one day', oneDay);
+		console.log('last seen', lastSeen);
+
+		console.log('diff', now - lastSeen);
 
 		// IF NO COOKIE IS AVAILABLE OR IS SET LONGER THAN A WEEK AGO PLAY THE LONG ANIMATION
-		if (!lastSeen || now - lastSeen > oneWeek) {
+		if (!lastSeen || now - lastSeen > oneDay) {
 			longIntroAnimationTimelineRef.current.play();
 			Cookies.set('intro-animation-last-seen', now);
 
