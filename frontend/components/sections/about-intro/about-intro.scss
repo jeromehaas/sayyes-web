@@ -16,10 +16,11 @@
 
 	&__text, .text {
 		margin-bottom: 80px;
-
+		
 		&__item, .item {
 			margin-bottom: 32px;
 			text-align: justify;
+			hyphens: auto;
 
 			&--center {
 				text-align: center;;

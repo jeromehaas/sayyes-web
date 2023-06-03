@@ -9,7 +9,11 @@
 
 		&__item, .item {
 			margin-bottom: 32px;
-			text-align: justify;
+
+			&__text {
+				text-align: justify;
+				hyphens: auto;
+			}
 
 			&__link {
 				text-decoration: underline;
