@@ -7,11 +7,13 @@ import InputSubmit from 'components//inputs/input-submit/input-submit';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import { useNotifierStore } from 'stores/notifier';
+import { useState } from 'react';
 
 const SellForm = () => {
 
 	// BRING IN STORE
 	const { showNotifier } = useNotifierStore();
+	const [isLoading, setIsLoading] = useState(false);
 
 	// BRING IN REACT-HOOK-FORM
 	const { register, handleSubmit, reset, formState, watch, getValues } = useForm();
@@ -25,40 +27,54 @@ const SellForm = () => {
 	// HANDLE DISPATCH
 	const handleDispatch = async (values) => {
 
-		// INITIALIZE FORM DATA
-		const submission = new FormData();
+		try {
 
-		// APPEND FILES
-		for (let i = 0; i < values?.picture?.length; i++) {
-			submission.append('files.picture', values.picture[i]);
-		};
+			// SET LOADING STATE
+			setIsLoading(true);
 
-		// APPEND DATA
-		submission.append('data', JSON.stringify({
-			firstname: values.firstname,
-			lastname: values.lastname,
-			street: values.street,
-			town: values.town,
-			email: values.email,
-			phone: values.phone,
-			brand: values.brand,
-			buyDate: values['buy-date'],
-			size: values.size,
-			originalPrice: values['original-price'],
-			sellPrice: values['sell-price'],
-		}));
+			// INITIALIZE FORM DATA
+			const submission = new FormData();
 
-		// DISPATCH FORM SUBMISSION
-		const response = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/dress-requests`, submission);
+			// APPEND FILES
+			for (let i = 0; i < values?.picture?.length; i++) {
+				submission.append('files.picture', values.picture[i]);
+			};
 
-		// HANDLE SUCCESS CASE
-		if (response.status === 200) {
-			showNotifier({ message: 'Die Nachricht wurde erfolgreich übermittelt', type: 'success', isVisible: 'true' });
-			reset();
+			// APPEND DATA
+			submission.append('data', JSON.stringify({
+				firstname: values.firstname,
+				lastname: values.lastname,
+				street: values.street,
+				town: values.town,
+				email: values.email,
+				phone: values.phone,
+				brand: values.brand,
+				buyDate: values['buy-date'],
+				size: values.size,
+				originalPrice: values['original-price'],
+				sellPrice: values['sell-price'],
+			}));
 
-		// HANDLE ERROR CASE
-		} else {
+			// DISPATCH FORM SUBMISSION
+			const response = await axios.post(`${ process.env.NEXT_PUBLIC_BACKEND_BASE_URL }/api/dress-requests`, submission);
+
+			// HANDLE SUCCESS CASE
+			if (response.status === 200) {
+				showNotifier({ message: 'Die Nachricht wurde erfolgreich übermittelt', type: 'success', isVisible: 'true' });
+				reset();
+
+				// HANDLE ERROR CASE
+			} else {
+				showNotifier({ message: 'Die Nachricht konnte nicht übermittelt werden', type: 'error', isVisible: 'true' });
+			};
+
+			// SET LOADING STATE
+			setIsLoading(false);
+
+		// HANDLE ERROS
+		} catch (error) {
 			showNotifier({ message: 'Die Nachricht konnte nicht übermittelt werden', type: 'error', isVisible: 'true' });
+			setIsLoading(false);
 		};
 
 	};
@@ -87,7 +103,7 @@ const SellForm = () => {
 					<InputFile className="dress__input dress__input--picture" label="" header="Foto hochladen" id="picture" errors={ formState.errors } errorText="Bitte wähle maximal 5 Bilder aus" register={ register } value={ values.picture } validation={ { validate: (value) => { return value.length <= 5; } } } readOnly />
 				</fieldset>
 				<fieldset className="container__action action">
-					<InputSubmit className="action__submit" label="Senden" />
+					<InputSubmit className="action__submit" label="Senden" isLoading={ isLoading } />
 				</fieldset>
 			</form>
 		</Section>

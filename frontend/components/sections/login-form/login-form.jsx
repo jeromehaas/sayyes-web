@@ -14,25 +14,18 @@ const LoginForm = () => {
 	const [input, setInput] = useState('');
 
 	// BRING IN AUTH-CONTEXT
-	const { setIsAuthenticated } = useContext(AuthContext);
+	const { checkLoginCode, loginWithToken } = useContext(AuthContext);
 
 	// EVENT HANDLERS
 	const updateInput = (value) => { return setInput(input + value); }; ;
 	const resetInput = () => { return setInput(''); };
 	const deleteInput = () => { return setInput(input.substring(0, input.length - 1)); };
 
-	// LOGIN
-	const login = () => {
-		setCookie('auth-token', sha256(input));
-		setIsAuthenticated(true);
-		router.push('/');
-	};
-
 	// CHECK FORM WHEN INPUT OF 6 CHARS IS REACHED
 	useEffect(() => {
 		if (input.length !== 6) return;
-		if (input !== process.env.NEXT_PUBLIC_DEVELOPER_LOGIN_CODE) resetInput();
-		if (input === process.env.NEXT_PUBLIC_DEVELOPER_LOGIN_CODE) login();
+		checkLoginCode(input);
+		resetInput();
 	}, [input]);
 
 	// UPDATE INPUT ON KEYPRESS
