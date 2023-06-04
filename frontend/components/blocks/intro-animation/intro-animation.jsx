@@ -43,7 +43,7 @@ const IntroAnimation = () => {
 		const oneDay = parseInt(24 * 60 * 60 * 1000, 10);
 
 		// IF NO COOKIE IS AVAILABLE OR IS SET LONGER THAN A WEEK AGO PLAY THE LONG ANIMATION
-		if (!lastSeen || (now - lastSeen) > oneDay) {
+		if (!lastSeen || (now - lastSeen) > oneDay || Number.isNaN(lastSeen)) {
 			longIntroAnimationTimelineRef.current.play();
 			Cookies.set('intro-animation-last-seen', now);
 
