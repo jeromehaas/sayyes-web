@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [V0.1.5] - 04.06.2023
+- refactor logic of auth provider
+- add login barrier for developer environment
+- add loading spinner to submit-button
+- add supprt for hyphens in paragraphs
+- fix script for tracking
+- fix media query for buy-intro component
+
 ## [V0.1.4] - 31.05.2023
 - remove login barrier
 
