@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [V0.1.6] - 05.06.2023
+- refactor script for tracking
+- add sitemap 
+- add sample env
+
 ## [V0.1.5] - 04.06.2023
 - refactor logic of auth provider
 - add login barrier for developer environment
